@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - GPA Calculator-->
+        <!--CalGPA Calc Table View Controller - GPA Calculator-->
         <scene sceneID="UwD-KE-ITB">
             <objects>
-                <tableViewController id="rHS-wM-5PU" sceneMemberID="viewController">
+                <tableViewController id="rHS-wM-5PU" customClass="GPACal_GPACalcTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JnG-qG-L5z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,13 +94,20 @@
                     <navigationItem key="navigationItem" title="New Entry" id="vJB-AT-41d">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KP8-0E-cRe">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="CH6-hV-mUN" kind="unwind" unwindAction="unwindToList:" id="cUB-bY-uNY"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="mYe-2Y-c5l">
                             <color key="tintColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="CH6-hV-mUN" kind="unwind" unwindAction="unwindToList:" id="Jfs-Ze-liN"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezZ-qs-HAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="CH6-hV-mUN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2155" y="170"/>
         </scene>

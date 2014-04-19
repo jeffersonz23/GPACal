@@ -10,4 +10,6 @@
 
 @interface GPACal_GPACalcTableViewController : UITableViewController
 
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue;
+
 @end

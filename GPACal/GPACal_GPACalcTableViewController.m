@@ -14,6 +14,10 @@
 
 @implementation GPACal_GPACalcTableViewController
 
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue {
+    
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
