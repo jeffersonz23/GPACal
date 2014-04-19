@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="A3s-u3-bNM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RVg-D8-eha">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Table View Controller - GPA Calculator-->
+        <scene sceneID="UwD-KE-ITB">
+            <objects>
+                <tableViewController id="rHS-wM-5PU" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JnG-qG-L5z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="h8g-yK-ZUY">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h8g-yK-ZUY" id="gLc-8n-DHG">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rHS-wM-5PU" id="xoP-0Y-Rmv"/>
+                            <outlet property="delegate" destination="rHS-wM-5PU" id="pcB-wA-dFa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="GPA Calculator" id="Lkz-Wv-Dop">
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="IAl-9K-suw">
+                            <color key="tintColor" red="0.36116249589386262" green="0.53454660610345128" blue="0.75813137755102045" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="A3s-u3-bNM" kind="modal" id="zOa-gH-Ldp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehD-CM-xP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056" y="170"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="W9h-H2-W6F">
             <objects>
@@ -50,7 +86,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezZ-qs-HAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1103" y="170"/>
+            <point key="canvasLocation" x="1629" y="170"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3dj-E1-Ya0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RVg-D8-eha" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bbb-ZQ-62y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rHS-wM-5PU" kind="relationship" relationship="rootViewController" id="H7F-sc-ncS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c79-5E-F76" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530" y="170"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
