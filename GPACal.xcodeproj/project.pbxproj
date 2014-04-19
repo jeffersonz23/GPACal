@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D61189E19031FBA00B2519F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D61189D19031FBA00B2519F /* Main.storyboard */; };
+		4D6118A119032A2E00B2519F /* GPACal_AddGPAItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6118A019032A2E00B2519F /* GPACal_AddGPAItem.m */; };
 		4D9CBF4D1902114A00A708D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9CBF4C1902114A00A708D1 /* Foundation.framework */; };
 		4D9CBF4F1902114A00A708D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9CBF4E1902114A00A708D1 /* CoreGraphics.framework */; };
 		4D9CBF511902114A00A708D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9CBF501902114A00A708D1 /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		4D61189D19031FBA00B2519F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4D61189F19032A2E00B2519F /* GPACal_AddGPAItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPACal_AddGPAItem.h; sourceTree = "<group>"; };
+		4D6118A019032A2E00B2519F /* GPACal_AddGPAItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPACal_AddGPAItem.m; sourceTree = "<group>"; };
 		4D9CBF491902114A00A708D1 /* GPACal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPACal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9CBF4C1902114A00A708D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4D9CBF4E1902114A00A708D1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -109,8 +112,10 @@
 		4D9CBF521902114A00A708D1 /* GPACal */ = {
 			isa = PBXGroup;
 			children = (
-				4D9CBF5B1902114A00A708D1 /* GPACal_AppDelegate.h */,
+				4D61189F19032A2E00B2519F /* GPACal_AddGPAItem.h */,
+				4D6118A019032A2E00B2519F /* GPACal_AddGPAItem.m */,
 				4D61189D19031FBA00B2519F /* Main.storyboard */,
+				4D9CBF5B1902114A00A708D1 /* GPACal_AppDelegate.h */,
 				4D9CBF5C1902114A00A708D1 /* GPACal_AppDelegate.m */,
 				4D9CBF5E1902114A00A708D1 /* Images.xcassets */,
 				4D9CBF531902114A00A708D1 /* Supporting Files */,
@@ -244,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6118A119032A2E00B2519F /* GPACal_AddGPAItem.m in Sources */,
 				4D9CBF5D1902114A00A708D1 /* GPACal_AppDelegate.m in Sources */,
 				4D9CBF591902114A00A708D1 /* main.m in Sources */,
 			);

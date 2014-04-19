@@ -31,7 +31,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Create" id="IAl-9K-suw">
                             <color key="tintColor" red="0.36116249589386262" green="0.53454660610345128" blue="0.75813137755102045" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="A3s-u3-bNM" kind="modal" id="zOa-gH-Ldp"/>
+                                <segue destination="9Go-w7-pml" kind="modal" id="zOa-gH-Ldp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -40,7 +40,7 @@
             </objects>
             <point key="canvasLocation" x="1056" y="170"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - New Entry-->
         <scene sceneID="W9h-H2-W6F">
             <objects>
                 <viewController id="A3s-u3-bNM" sceneMemberID="viewController">
@@ -52,21 +52,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="New Entry" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYF-9j-4uc">
-                                <rect key="frame" x="121" y="82" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3da-cA-dvk">
-                                <rect key="frame" x="20" y="139" width="280" height="30"/>
+                                <rect key="frame" x="20" y="96" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GPA (ex. 3.75)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lKz-ZR-I5r">
-                                <rect key="frame" x="20" y="199" width="280" height="30"/>
+                                <rect key="frame" x="20" y="156" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -74,19 +67,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3da-cA-dvk" firstAttribute="top" secondItem="fco-Th-Knk" secondAttribute="bottom" constant="119" id="2bx-uK-Meg"/>
                             <constraint firstItem="lKz-ZR-I5r" firstAttribute="leading" secondItem="mHy-wV-0sP" secondAttribute="leading" constant="20" id="5pz-n5-4gg"/>
                             <constraint firstItem="3da-cA-dvk" firstAttribute="leading" secondItem="mHy-wV-0sP" secondAttribute="leading" constant="20" id="EhK-QI-JQe"/>
+                            <constraint firstItem="lKz-ZR-I5r" firstAttribute="top" secondItem="fco-Th-Knk" secondAttribute="bottom" constant="92" id="eGv-cf-YJX"/>
                             <constraint firstAttribute="trailing" secondItem="3da-cA-dvk" secondAttribute="trailing" constant="20" id="eSD-p9-kdd"/>
+                            <constraint firstItem="3da-cA-dvk" firstAttribute="top" secondItem="fco-Th-Knk" secondAttribute="bottom" constant="32" id="gxh-Lc-F7Z"/>
                             <constraint firstAttribute="trailing" secondItem="lKz-ZR-I5r" secondAttribute="trailing" constant="20" id="km1-EW-Ygl"/>
-                            <constraint firstItem="lKz-ZR-I5r" firstAttribute="top" secondItem="fco-Th-Knk" secondAttribute="bottom" constant="179" id="omR-Xm-zIw"/>
-                            <constraint firstItem="YYF-9j-4uc" firstAttribute="top" secondItem="fco-Th-Knk" secondAttribute="bottom" constant="62" id="yqp-tV-S9H"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New Entry" id="vJB-AT-41d">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KP8-0E-cRe">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="mYe-2Y-c5l">
+                            <color key="tintColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezZ-qs-HAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1629" y="170"/>
+            <point key="canvasLocation" x="2155" y="170"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3dj-E1-Ya0">
@@ -105,6 +105,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c79-5E-F76" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="530" y="170"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tRd-CU-4Cm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Go-w7-pml" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9pu-v5-gIy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A3s-u3-bNM" kind="relationship" relationship="rootViewController" id="UV1-U7-Aza"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jzg-u6-ZvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629" y="170"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
