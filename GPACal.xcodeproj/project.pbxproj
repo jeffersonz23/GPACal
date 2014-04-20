@@ -118,6 +118,8 @@
 		4D9CBF521902114A00A708D1 /* GPACal */ = {
 			isa = PBXGroup;
 			children = (
+				4D6118A81903888800B2519F /* GPACal_GPAItem.h */,
+				4D6118A91903888800B2519F /* GPACal_GPAItem.m */,
 				4D6118A219032AF100B2519F /* GPACal_AddGPAItemViewController.h */,
 				4D6118A319032AF100B2519F /* GPACal_AddGPAItemViewController.m */,
 				4D61189D19031FBA00B2519F /* Main.storyboard */,
@@ -127,8 +129,6 @@
 				4D9CBF5C1902114A00A708D1 /* GPACal_AppDelegate.m */,
 				4D9CBF5E1902114A00A708D1 /* Images.xcassets */,
 				4D9CBF531902114A00A708D1 /* Supporting Files */,
-				4D6118A81903888800B2519F /* GPACal_GPAItem.h */,
-				4D6118A91903888800B2519F /* GPACal_GPAItem.m */,
 			);
 			path = GPACal;
 			sourceTree = "<group>";

@@ -7,12 +7,22 @@
 //
 
 #import "GPACal_GPACalcTableViewController.h"
+#import "GPACal_GPAItem.h"
 
 @interface GPACal_GPACalcTableViewController ()
+
+@property NSMutableArray *GPAItemName;
+@property NSMutableArray *GPAItemNum;
 
 @end
 
 @implementation GPACal_GPACalcTableViewController
+
+- (void)loadInitialData {
+    GPACal_GPAItem *item1 = [[GPACal_GPAItem alloc] init];
+    item1.itemName = @"Testing";
+    [self.GPAItemName addObject:item1];
+}
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
     
@@ -30,6 +40,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.GPAItemName = [[NSMutableArray alloc] init];
+    self.GPAItemNum = [[NSMutableArray alloc] init];
+    [self loadInitialData]; 
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -48,28 +61,37 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.GPAItemName count];
 }
 
 /*
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row%2 == 0) {
+        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
+        cell.backgroundColor = altCellColor;
+    }
+}
+*/
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"ListPrototypeCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    GPACal_GPAItem *GPAItem = [self.GPAItemName objectAtIndex:indexPath.row];
+    cell.textLabel.text = GPAItem.itemName;
     
     // Configure the cell...
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
