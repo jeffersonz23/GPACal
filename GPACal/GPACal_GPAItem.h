@@ -14,4 +14,6 @@
 @property BOOL completed;
 @property (readonly) NSDate *creationDate;
 
+@property NSString *itemSubName;
+
 @end

@@ -22,6 +22,9 @@
     GPACal_GPAItem *item1 = [[GPACal_GPAItem alloc] init];
     item1.itemName = @"Testing";
     [self.GPAItemName addObject:item1];
+    GPACal_GPAItem *item2 = [[GPACal_GPAItem alloc] init];
+    item2.itemSubName = @"Testing2";
+    [self.GPAItemNum addObject:item2];
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
@@ -71,14 +74,14 @@
     return [self.GPAItemName count];
 }
 
-/*
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row%2 == 0) {
         UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
         cell.backgroundColor = altCellColor;
     }
 }
-*/
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -86,7 +89,9 @@
     static NSString *CellIdentifier = @"ListPrototypeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     GPACal_GPAItem *GPAItem = [self.GPAItemName objectAtIndex:indexPath.row];
+    GPACal_GPAItem *GPASubItem = [self.GPAItemNum objectAtIndex:indexPath.row];
     cell.textLabel.text = GPAItem.itemName;
+    cell.detailTextLabel.text = GPASubItem.itemSubName;
     
     // Configure the cell...
     
