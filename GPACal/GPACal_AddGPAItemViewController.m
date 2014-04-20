@@ -10,9 +10,25 @@
 
 @interface GPACal_AddGPAItemViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextField *numField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+
 @end
 
 @implementation GPACal_AddGPAItemViewController
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if (sender != self.doneButton) return;
+    if ((self.textField.text.length > 0) && (self.numField.text.length > 0)) {
+        self.GPAItem = [[GPACal_GPAItem alloc] init];
+        //if (self.numField.text > 0) {
+        self.GPAItem.itemName = self.textField.text;
+        self.GPAItem.completed = NO;
+        //}
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

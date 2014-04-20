@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GPACal_GPAItem.h"
 
 @interface GPACal_AddGPAItemViewController : UIViewController
+
+@property GPACal_GPAItem *GPAItem;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "GPACal_GPACalcTableViewController.h"
 #import "GPACal_GPAItem.h"
+#import "GPACal_AddGPAItemViewController.h"
 
 @interface GPACal_GPACalcTableViewController ()
 
@@ -28,6 +29,14 @@
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
+    
+    GPACal_AddGPAItemViewController *source = [segue sourceViewController];
+    GPACal_GPAItem *item = source.GPAItem;
+    if (item != nil) {
+        [self.GPAItemName addObject:item];
+        [self.GPAItemNum addObject:item];
+        [self.tableView reloadData];
+    }
     
 }
 
