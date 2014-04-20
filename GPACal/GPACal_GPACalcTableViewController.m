@@ -13,7 +13,6 @@
 @interface GPACal_GPACalcTableViewController ()
 
 @property NSMutableArray *GPAItemName;
-@property NSMutableArray *GPAItemNum;
 
 @end
 
@@ -21,11 +20,14 @@
 
 - (void)loadInitialData {
     GPACal_GPAItem *item1 = [[GPACal_GPAItem alloc] init];
-    item1.itemName = @"Testing";
+    item1.className = @"Testing";
+    item1.grade = [NSNumber numberWithFloat:3.14];
     [self.GPAItemName addObject:item1];
-    GPACal_GPAItem *item2 = [[GPACal_GPAItem alloc] init];
-    item2.itemSubName = @"Testing2";
-    [self.GPAItemNum addObject:item2];
+    
+//    GPACal_GPAItem *item2 = [[GPACal_GPAItem alloc] init];
+//    item2.className = @"Testing2";
+//    item2.grade = [NSNumber numberWithFloat:3.33];
+//    [self.GPAItemName addObject:item2];
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
@@ -34,7 +36,7 @@
     GPACal_GPAItem *item = source.GPAItem;
     if (item != nil) {
         [self.GPAItemName addObject:item];
-        [self.GPAItemNum addObject:item];
+//        [self.GPAItemNum addObject:item];
         [self.tableView reloadData];
     }
     
@@ -53,8 +55,8 @@
 {
     [super viewDidLoad];
     self.GPAItemName = [[NSMutableArray alloc] init];
-    self.GPAItemNum = [[NSMutableArray alloc] init];
-    [self loadInitialData]; 
+//    self.GPAItemNum = [[NSMutableArray alloc] init];
+    [self loadInitialData];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -97,10 +99,12 @@
 {
     static NSString *CellIdentifier = @"ListPrototypeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+
     GPACal_GPAItem *GPAItem = [self.GPAItemName objectAtIndex:indexPath.row];
-    GPACal_GPAItem *GPASubItem = [self.GPAItemNum objectAtIndex:indexPath.row];
-    cell.textLabel.text = GPAItem.itemName;
-    cell.detailTextLabel.text = GPASubItem.itemSubName;
+//    GPACal_GPAItem *GPASubItem = [self.GPAItemNum objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = GPAItem.className;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", [GPAItem.grade floatValue]];
     
     // Configure the cell...
     

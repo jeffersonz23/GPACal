@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D61189E19031FBA00B2519F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D61189D19031FBA00B2519F /* Main.storyboard */; };
 		4D6118A419032AF100B2519F /* GPACal_AddGPAItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6118A319032AF100B2519F /* GPACal_AddGPAItemViewController.m */; };
 		4D6118A719032CBB00B2519F /* GPACal_GPACalcTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6118A619032CBB00B2519F /* GPACal_GPACalcTableViewController.m */; };
 		4D6118AA1903888800B2519F /* GPACal_GPAItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6118A91903888800B2519F /* GPACal_GPAItem.m */; };
@@ -23,6 +22,7 @@
 		4D9CBF681902114A00A708D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9CBF501902114A00A708D1 /* UIKit.framework */; };
 		4D9CBF701902114A00A708D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CBF6E1902114A00A708D1 /* InfoPlist.strings */; };
 		4D9CBF721902114A00A708D1 /* GPACalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CBF711902114A00A708D1 /* GPACalTests.m */; };
+		4DDC506D190440DF00240648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC506C190440DF00240648 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D61189D19031FBA00B2519F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4D6118A219032AF100B2519F /* GPACal_AddGPAItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPACal_AddGPAItemViewController.h; sourceTree = "<group>"; };
 		4D6118A319032AF100B2519F /* GPACal_AddGPAItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPACal_AddGPAItemViewController.m; sourceTree = "<group>"; };
 		4D6118A519032CBB00B2519F /* GPACal_GPACalcTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPACal_GPACalcTableViewController.h; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		4D9CBF6D1902114A00A708D1 /* GPACalTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GPACalTests-Info.plist"; sourceTree = "<group>"; };
 		4D9CBF6F1902114A00A708D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4D9CBF711902114A00A708D1 /* GPACalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPACalTests.m; sourceTree = "<group>"; };
+		4DDC506C190440DF00240648 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,7 @@
 				4D6118A91903888800B2519F /* GPACal_GPAItem.m */,
 				4D6118A219032AF100B2519F /* GPACal_AddGPAItemViewController.h */,
 				4D6118A319032AF100B2519F /* GPACal_AddGPAItemViewController.m */,
-				4D61189D19031FBA00B2519F /* Main.storyboard */,
+				4DDC506C190440DF00240648 /* Main.storyboard */,
 				4D6118A519032CBB00B2519F /* GPACal_GPACalcTableViewController.h */,
 				4D6118A619032CBB00B2519F /* GPACal_GPACalcTableViewController.m */,
 				4D9CBF5B1902114A00A708D1 /* GPACal_AppDelegate.h */,
@@ -238,7 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D61189E19031FBA00B2519F /* Main.storyboard in Resources */,
+				4DDC506D190440DF00240648 /* Main.storyboard in Resources */,
 				4D9CBF571902114A00A708D1 /* InfoPlist.strings in Resources */,
 				4D9CBF5F1902114A00A708D1 /* Images.xcassets in Resources */,
 			);

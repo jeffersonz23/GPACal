@@ -24,8 +24,15 @@
     if ((self.textField.text.length > 0) && (self.numField.text.length > 0)) {
         self.GPAItem = [[GPACal_GPAItem alloc] init];
         //if (self.numField.text > 0) {
-        self.GPAItem.itemName = self.textField.text;
-        self.GPAItem.completed = NO;
+        
+        // Changed GPAItem class so it won't work anymore
+//        self.GPAItem.itemName = self.textField.text;
+//        self.GPAItem.completed = NO;
+        
+        self.GPAItem.className = self.textField.text;
+        // Add other controls to get this working in addItem view
+        //self.GPAItem.credit
+        self.GPAItem.grade = [NSNumber numberWithFloat:[self.numField.text floatValue]];
         //}
     }
 }
