@@ -9,6 +9,7 @@
 #import "GPACal_GPACalcTableViewController.h"
 #import "GPACal_GPAItem.h"
 #import "GPACal_AddGPAItemViewController.h"
+#import "GPACal_ClassCellTableViewCell.h"
 
 @interface GPACal_GPACalcTableViewController ()
 
@@ -24,10 +25,10 @@
     item1.grade = [NSNumber numberWithFloat:3.14];
     [self.GPAItemName addObject:item1];
     
-//    GPACal_GPAItem *item2 = [[GPACal_GPAItem alloc] init];
-//    item2.className = @"Testing2";
-//    item2.grade = [NSNumber numberWithFloat:3.33];
-//    [self.GPAItemName addObject:item2];
+    GPACal_GPAItem *item2 = [[GPACal_GPAItem alloc] init];
+    item2.className = @"Testing2";
+    item2.grade = [NSNumber numberWithFloat:3.33];
+    [self.GPAItemName addObject:item2];
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
@@ -95,16 +96,17 @@
 
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (GPACal_ClassCellTableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ListPrototypeCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"ClassCell";
+    GPACal_ClassCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
     GPACal_GPAItem *GPAItem = [self.GPAItemName objectAtIndex:indexPath.row];
 //    GPACal_GPAItem *GPASubItem = [self.GPAItemNum objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = GPAItem.className;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", [GPAItem.grade floatValue]];
+    cell.className.text = GPAItem.className;
+    cell.creditsGrade.text = [NSString stringWithFormat:@"%@ - %@", GPAItem.credit, GPAItem.grade];
+    cell.GPA.text = [NSString stringWithFormat:@"%.2f", [GPAItem.grade floatValue]];
     
     // Configure the cell...
     

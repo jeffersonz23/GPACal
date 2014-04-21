@@ -10,8 +10,9 @@
 
 @interface GPACal_AddGPAItemViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextField *textField;
-@property (weak, nonatomic) IBOutlet UITextField *numField;
+@property (weak, nonatomic) IBOutlet UITextField *classField;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *creditAmount;
+@property (weak, nonatomic) IBOutlet UISlider *gradeSlider;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @end
@@ -19,21 +20,16 @@
 @implementation GPACal_AddGPAItemViewController
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+    NSLog(@"First");
     if (sender != self.doneButton) return;
-    if ((self.textField.text.length > 0) && (self.numField.text.length > 0)) {
+    if (self.classField.text.length > 0) {
         self.GPAItem = [[GPACal_GPAItem alloc] init];
-        //if (self.numField.text > 0) {
         
-        // Changed GPAItem class so it won't work anymore
-//        self.GPAItem.itemName = self.textField.text;
-//        self.GPAItem.completed = NO;
-        
-        self.GPAItem.className = self.textField.text;
-        // Add other controls to get this working in addItem view
-        //self.GPAItem.credit
-        self.GPAItem.grade = [NSNumber numberWithFloat:[self.numField.text floatValue]];
-        //}
+        self.GPAItem.className = self.classField.text;
+        NSNumber *myNum = [NSNumber numberWithInteger:self.creditAmount.selectedSegmentIndex];
+        self.GPAItem.credit = myNum;
+        NSLog(@"H");
+        //self.GPAItem.grade = self.
     }
 }
 

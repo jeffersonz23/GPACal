@@ -20,5 +20,6 @@
 @property NSString *className;
 @property NSNumber *credit;
 @property NSNumber *grade;
+@property NSNumber *gpa;
 
 @end
