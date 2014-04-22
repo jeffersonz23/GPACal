@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UISlider *gradeSlider;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
+@property (nonatomic) int stepValue;
+@property (nonatomic) int lastStep;
+
 @end
 
 @implementation GPACal_AddGPAItemViewController
@@ -50,6 +53,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)valueChanged:(id)sender {
+    
+    // Used for slider "stepping"
+    float newStep = roundf((_gradeSlider.value) / self.stepValue);
+    self.gradeSlider.value = newStep * self.stepValue;
+    
 }
 
 /*
