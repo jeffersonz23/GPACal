@@ -21,7 +21,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouP-py-qAP">
-                                            <rect key="frame" x="20" y="5" width="43" height="21"/>
+                                            <rect key="frame" x="20" y="5" width="203" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
@@ -136,6 +136,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="3da-cA-dvk" firstAttribute="leading" secondItem="mHy-wV-0sP" secondAttribute="leading" constant="23" id="3ps-PA-TpI"/>
                             <constraint firstAttribute="trailing" secondItem="3da-cA-dvk" secondAttribute="trailing" constant="17" id="3sE-AY-ayi"/>
@@ -145,6 +146,9 @@
                             <constraint firstItem="QtF-4i-9qh" firstAttribute="leading" secondItem="mHy-wV-0sP" secondAttribute="leading" constant="23" id="sa0-Wn-Fe3"/>
                             <constraint firstAttribute="trailing" secondItem="K3m-4o-Xz5" secondAttribute="trailing" constant="17" id="z3B-9F-AZN"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WC9-zd-KSL" appends="YES" id="3Pd-zR-MMs"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="New Entry" id="vJB-AT-41d">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KP8-0E-cRe">
@@ -170,6 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezZ-qs-HAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="CH6-hV-mUN" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="WC9-zd-KSL"/>
             </objects>
             <point key="canvasLocation" x="3667" y="170"/>
         </scene>

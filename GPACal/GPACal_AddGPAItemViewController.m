@@ -54,9 +54,13 @@
 {
     [super viewDidLoad];
     
+    // Slider
     self.stepValue = 1.0f;
     self.lastStep = (self.gradeSlider.value) /self.stepValue;
-    // Do any additional setup after loading the view.
+    
+    // Textfield keyboard hide
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,6 +103,10 @@
     } else if (self.gradeSlider.value == 9) {
         self.gradeLabel.text = @"F";
     }
+}
+
+- (void)dismissKeyboard {
+    [_classField resignFirstResponder];
 }
 
 /*
