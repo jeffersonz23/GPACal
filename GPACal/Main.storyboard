@@ -85,13 +85,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3da-cA-dvk">
-                                <rect key="frame" x="20" y="96" width="280" height="30"/>
+                                <rect key="frame" x="23" y="116" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QtF-4i-9qh">
-                                <rect key="frame" x="20" y="180" width="280" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QtF-4i-9qh">
+                                <rect key="frame" x="23" y="200" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="1"/>
@@ -102,34 +102,45 @@
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rR7-8b-cUT">
-                                <rect key="frame" x="20" y="245" width="48" height="21"/>
+                                <rect key="frame" x="23" y="265" width="48" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJN-Gp-ug0">
-                                <rect key="frame" x="20" y="151" width="55" height="21"/>
+                                <rect key="frame" x="23" y="171" width="55" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="K3m-4o-Xz5">
-                                <rect key="frame" x="18" y="348" width="284" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="K3m-4o-Xz5">
+                                <rect key="frame" x="21" y="368" width="284" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45l-4x-Hsz">
-                                <rect key="frame" x="14" y="274" width="280" height="66"/>
+                                <rect key="frame" x="17" y="294" width="280" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6W-8A-g2C">
+                                <rect key="frame" x="17" y="87" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3da-cA-dvk" firstAttribute="leading" secondItem="mHy-wV-0sP" secondAttribute="leading" constant="20" id="EhK-QI-JQe"/>
-                            <constraint firstAttribute="trailing" secondItem="3da-cA-dvk" secondAttribute="trailing" constant="20" id="eSD-p9-kdd"/>
-                            <constraint firstItem="3da-cA-dvk" firstAttribute="top" secondItem="fco-Th-Knk" secondAttribute="bottom" constant="32" id="gxh-Lc-F7Z"/>
+                            <constraint firstItem="3da-cA-dvk" firstAttribute="leading" secondItem="mHy-wV-0sP" secondAttribute="leading" constant="23" id="3ps-PA-TpI"/>
+                            <constraint firstAttribute="trailing" secondItem="3da-cA-dvk" secondAttribute="trailing" constant="17" id="3sE-AY-ayi"/>
+                            <constraint firstItem="3da-cA-dvk" firstAttribute="top" secondItem="fco-Th-Knk" secondAttribute="bottom" constant="52" id="TYS-tH-vOj"/>
+                            <constraint firstItem="K3m-4o-Xz5" firstAttribute="leading" secondItem="mHy-wV-0sP" secondAttribute="leading" constant="23" id="Zzu-Kg-zyU"/>
+                            <constraint firstAttribute="trailing" secondItem="QtF-4i-9qh" secondAttribute="trailing" constant="17" id="mEN-9A-96f"/>
+                            <constraint firstItem="QtF-4i-9qh" firstAttribute="leading" secondItem="mHy-wV-0sP" secondAttribute="leading" constant="23" id="sa0-Wn-Fe3"/>
+                            <constraint firstAttribute="trailing" secondItem="K3m-4o-Xz5" secondAttribute="trailing" constant="17" id="z3B-9F-AZN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Entry" id="vJB-AT-41d">

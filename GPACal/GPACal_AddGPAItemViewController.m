@@ -20,7 +20,6 @@
 @implementation GPACal_AddGPAItemViewController
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"First");
     if (sender != self.doneButton) return;
     if (self.classField.text.length > 0) {
         self.GPAItem = [[GPACal_GPAItem alloc] init];
@@ -28,7 +27,6 @@
         self.GPAItem.className = self.classField.text;
         NSNumber *myNum = [NSNumber numberWithInteger:self.creditAmount.selectedSegmentIndex];
         self.GPAItem.credit = myNum;
-        NSLog(@"H");
         //self.GPAItem.grade = self.
     }
 }
