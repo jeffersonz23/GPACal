@@ -46,6 +46,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.stepValue = 1.0f;
+    self.lastStep = (self.gradeSlider.value) /self.stepValue;
     // Do any additional setup after loading the view.
 }
 
