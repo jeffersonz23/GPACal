@@ -24,18 +24,21 @@
                                             <rect key="frame" x="20" y="5" width="203" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits - Grade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W66-pM-JTH">
                                             <rect key="frame" x="20" y="25" width="119" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GPA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Veu-01-wGE">
                                             <rect key="frame" x="231" y="10" width="69" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <color key="textColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -60,7 +63,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="GPA Calculator" id="Lkz-Wv-Dop">
                         <barButtonItem key="rightBarButtonItem" title="Create" id="IAl-9K-suw">
-                            <color key="tintColor" red="0.36116249589386262" green="0.53454660610345128" blue="0.75813137755102045" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.29533320308315247" green="0.44292423027547123" blue="0.63191565688775508" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="9Go-w7-pml" kind="modal" id="zOa-gH-Ldp"/>
                             </connections>
@@ -87,6 +90,8 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3da-cA-dvk">
                                 <rect key="frame" x="23" y="116" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -100,6 +105,7 @@
                                     <segment title="4"/>
                                     <segment title="5"/>
                                 </segments>
+                                <color key="tintColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rR7-8b-cUT">
                                 <rect key="frame" x="23" y="265" width="48" height="21"/>
@@ -117,6 +123,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="K3m-4o-Xz5">
                                 <rect key="frame" x="21" y="368" width="284" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="valueChanged:" destination="A3s-u3-bNM" eventType="valueChanged" id="LXh-bq-9hw"/>
                                 </connections>
@@ -125,6 +132,7 @@
                                 <rect key="frame" x="17" y="294" width="280" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6W-8A-g2C">
