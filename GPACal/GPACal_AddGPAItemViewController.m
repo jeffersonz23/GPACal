@@ -71,16 +71,8 @@
     float newStep = roundf((_gradeSlider.value) / self.stepValue);
     self.gradeSlider.value = newStep * self.stepValue;
     
-    NSLog(@"%f", self.gradeSlider.value);
-    
     // Grade Value change
     self.GPAItem.sliderValue = [NSNumber numberWithFloat:self.gradeSlider.value];
-    
-    //NSLog(@"%@", self.GPAItem.sliderValue);
-    
-//    if (self.GPAItem.sliderValue == NULL) {
-//        self.gradeLabel.text = @"NULL";
-//    }
     
     if (self.gradeSlider.value == 1) {
         self.gradeLabel.text = @"A";
