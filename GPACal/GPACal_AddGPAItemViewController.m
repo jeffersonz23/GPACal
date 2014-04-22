@@ -33,7 +33,7 @@
         self.GPAItem.className = self.classField.text;
         
         // credit amount
-        NSNumber *myNum = [NSNumber numberWithInteger:self.creditAmount.selectedSegmentIndex];
+        NSNumber *myNum = [NSNumber numberWithInteger:self.creditAmount.selectedSegmentIndex + 1];
         self.GPAItem.credit = myNum;
         
         // Grade and GPA
