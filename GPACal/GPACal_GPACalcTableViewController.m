@@ -22,13 +22,13 @@
 - (void)loadInitialData {
     GPACal_GPAItem *item1 = [[GPACal_GPAItem alloc] init];
     item1.className = @"Testing";
-    item1.grade = [NSNumber numberWithFloat:3.14];
+    item1.grade = @"3.14";
     [self.GPAItemName addObject:item1];
     
-    GPACal_GPAItem *item2 = [[GPACal_GPAItem alloc] init];
-    item2.className = @"Testing2";
-    item2.grade = [NSNumber numberWithFloat:3.33];
-    [self.GPAItemName addObject:item2];
+//    GPACal_GPAItem *item2 = [[GPACal_GPAItem alloc] init];
+//    item2.className = @"Testing2";
+//    item2.grade = [NSNumber numberWithFloat:3.33];
+//    [self.GPAItemName addObject:item2];
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {

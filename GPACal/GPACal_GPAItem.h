@@ -19,7 +19,8 @@
 
 @property NSString *className;
 @property NSNumber *credit;
-@property NSNumber *grade;
+@property NSString *grade;
 @property NSNumber *gpa;
+@property NSNumber *sliderValue;
 
 @end

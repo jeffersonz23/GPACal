@@ -1,3 +1,4 @@
+
 //
 //  GPACal_AddGPAItemViewController.m
 //  GPACal
@@ -14,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *creditAmount;
 @property (weak, nonatomic) IBOutlet UISlider *gradeSlider;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
 
 @property (nonatomic) int stepValue;
 @property (nonatomic) int lastStep;
@@ -27,10 +29,15 @@
     if (self.classField.text.length > 0) {
         self.GPAItem = [[GPACal_GPAItem alloc] init];
         
+        // class name
         self.GPAItem.className = self.classField.text;
+        
+        // credit amount
         NSNumber *myNum = [NSNumber numberWithInteger:self.creditAmount.selectedSegmentIndex];
         self.GPAItem.credit = myNum;
-        //self.GPAItem.grade = self.
+        
+        // Grade and GPA
+        
     }
 }
 
@@ -64,6 +71,44 @@
     float newStep = roundf((_gradeSlider.value) / self.stepValue);
     self.gradeSlider.value = newStep * self.stepValue;
     
+    NSLog(@"%f", self.gradeSlider.value);
+    
+    // Grade Value change
+    self.GPAItem.sliderValue = [NSNumber numberWithFloat:self.gradeSlider.value];
+    
+    //NSLog(@"%@", self.GPAItem.sliderValue);
+    
+//    if (self.GPAItem.sliderValue == NULL) {
+//        self.gradeLabel.text = @"NULL";
+//    }
+    
+    if (self.gradeSlider.value == 1) {
+        self.gradeLabel.text = @"A";
+        
+    } else if (self.gradeSlider.value == 2) {
+        self.gradeLabel.text = @"A-";
+        
+    } else if (self.gradeSlider.value == 3) {
+        self.gradeLabel.text = @"B";
+        
+    } else if (self.gradeSlider.value == 4) {
+        self.gradeLabel.text = @"B-";
+        
+    } else if (self.gradeSlider.value == 5) {
+        self.gradeLabel.text = @"C";
+        
+    } else if (self.gradeSlider.value == 6) {
+        self.gradeLabel.text = @"C-";
+        
+    } else if (self.gradeSlider.value == 7) {
+        self.gradeLabel.text = @"D";
+        
+    } else if (self.gradeSlider.value == 8) {
+        self.gradeLabel.text = @"D-";
+        
+    } else if (self.gradeSlider.value == 9) {
+        self.gradeLabel.text = @"F";
+    }
 }
 
 /*

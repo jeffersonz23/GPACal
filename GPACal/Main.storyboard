@@ -164,6 +164,7 @@
                         <outlet property="classField" destination="3da-cA-dvk" id="ZlJ-5B-Aim"/>
                         <outlet property="creditAmount" destination="QtF-4i-9qh" id="Ozt-6J-O1H"/>
                         <outlet property="doneButton" destination="mYe-2Y-c5l" id="eV3-gL-8F6"/>
+                        <outlet property="gradeLabel" destination="45l-4x-Hsz" id="DMr-pa-qEL"/>
                         <outlet property="gradeSlider" destination="K3m-4o-Xz5" id="g6Z-ln-hQH"/>
                     </connections>
                 </viewController>
