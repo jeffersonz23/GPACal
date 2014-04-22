@@ -76,31 +76,32 @@
     self.gradeSlider.value = newStep * self.stepValue;
     
     // Grade Value change    
-    if (self.gradeSlider.value == 1) {
+    if (self.gradeSlider.value == 0) {
         self.gradeLabel.text = @"A";
         
-    } else if (self.gradeSlider.value == 2) {
+    } else if (self.gradeSlider.value == 1
+               ) {
         self.gradeLabel.text = @"A-";
         
-    } else if (self.gradeSlider.value == 3) {
+    } else if (self.gradeSlider.value == 2) {
         self.gradeLabel.text = @"B";
         
-    } else if (self.gradeSlider.value == 4) {
+    } else if (self.gradeSlider.value == 3) {
         self.gradeLabel.text = @"B-";
         
-    } else if (self.gradeSlider.value == 5) {
+    } else if (self.gradeSlider.value == 4) {
         self.gradeLabel.text = @"C";
         
-    } else if (self.gradeSlider.value == 6) {
+    } else if (self.gradeSlider.value == 5) {
         self.gradeLabel.text = @"C-";
         
-    } else if (self.gradeSlider.value == 7) {
+    } else if (self.gradeSlider.value == 6) {
         self.gradeLabel.text = @"D";
         
-    } else if (self.gradeSlider.value == 8) {
+    } else if (self.gradeSlider.value == 7) {
         self.gradeLabel.text = @"D-";
         
-    } else if (self.gradeSlider.value == 9) {
+    } else if (self.gradeSlider.value == 8) {
         self.gradeLabel.text = @"F";
     }
 }
