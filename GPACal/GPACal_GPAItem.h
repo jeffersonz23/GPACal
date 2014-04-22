@@ -21,6 +21,5 @@
 @property NSNumber *credit;
 @property NSString *grade;
 @property NSNumber *gpa;
-@property NSNumber *sliderValue;
 
 @end
