@@ -37,7 +37,12 @@
         self.GPAItem.credit = myNum;
         
         // Grade and GPA
-        
+        self.GPAItem.grade = self.gradeLabel.text;
+        if ([self.gradeLabel.text  isEqual: @"A"]) {
+            self.GPAItem.gpa = [NSNumber numberWithDouble:4.00];
+        } else if {
+            //
+        }
     }
 }
 
@@ -79,8 +84,7 @@
     if (self.gradeSlider.value == 0) {
         self.gradeLabel.text = @"A";
         
-    } else if (self.gradeSlider.value == 1
-               ) {
+    } else if (self.gradeSlider.value == 1) {
         self.gradeLabel.text = @"A-";
         
     } else if (self.gradeSlider.value == 2) {

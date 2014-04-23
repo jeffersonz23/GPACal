@@ -24,21 +24,21 @@
                                             <rect key="frame" x="20" y="5" width="203" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.2953332031" green="0.4429242303" blue="0.63191565689999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits - Grade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W66-pM-JTH">
                                             <rect key="frame" x="20" y="25" width="119" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.2953332031" green="0.4429242303" blue="0.63191565689999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GPA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Veu-01-wGE">
                                             <rect key="frame" x="231" y="10" width="69" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <color key="textColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.20291524991851884" green="0.30432094983918823" blue="0.43417171556122447" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -62,8 +62,8 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="GPA Calculator" id="Lkz-Wv-Dop">
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="IAl-9K-suw">
-                            <color key="tintColor" red="0.29533320308315247" green="0.44292423027547123" blue="0.63191565688775508" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IAl-9K-suw">
+                            <color key="tintColor" red="0.20291524990000001" green="0.30432094980000002" blue="0.43417171560000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="9Go-w7-pml" kind="modal" id="zOa-gH-Ldp"/>
                             </connections>
@@ -111,13 +111,14 @@
                                 <rect key="frame" x="23" y="265" width="48" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.20291524990000001" green="0.30432094980000002" blue="0.43417171560000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJN-Gp-ug0">
                                 <rect key="frame" x="23" y="171" width="55" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20291524990000001" green="0.30432094980000002" blue="0.43417171560000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="K3m-4o-Xz5">
@@ -139,7 +140,7 @@
                                 <rect key="frame" x="17" y="87" width="43" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.20291524990000001" green="0.30432094980000002" blue="0.43417171560000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -166,7 +167,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="mYe-2Y-c5l">
-                            <color key="tintColor" red="0.36116249589999999" green="0.53454660610000004" blue="0.75813137760000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.20291524990000001" green="0.30432094980000002" blue="0.43417171560000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="CH6-hV-mUN" kind="unwind" unwindAction="unwindToList:" id="Jfs-Ze-liN"/>
                             </connections>

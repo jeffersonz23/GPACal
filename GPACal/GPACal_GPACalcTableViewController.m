@@ -23,6 +23,7 @@
     GPACal_GPAItem *item1 = [[GPACal_GPAItem alloc] init];
     item1.className = @"Testing";
     item1.grade = @"3.14";
+    item1.credit = [NSNumber numberWithInteger:1];
     [self.GPAItemName addObject:item1];
     
 //    GPACal_GPAItem *item2 = [[GPACal_GPAItem alloc] init];
