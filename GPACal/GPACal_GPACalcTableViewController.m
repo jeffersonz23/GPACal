@@ -20,11 +20,11 @@
 @implementation GPACal_GPACalcTableViewController
 
 - (void)loadInitialData {
-//    GPACal_GPAItem *item1 = [[GPACal_GPAItem alloc] init];
-//    item1.className = @"Testing";
-//    item1.grade = @"3.14";
-//    item1.credit = [NSNumber numberWithInteger:1];
-//    [self.GPAItemName addObject:item1];
+    GPACal_GPAItem *item1 = [[GPACal_GPAItem alloc] init];
+    item1.className = @"Testing";
+    item1.grade = @"3.14";
+    item1.credit = [NSNumber numberWithInteger:1];
+    [self.GPAItemName addObject:item1];
     
 //    GPACal_GPAItem *item2 = [[GPACal_GPAItem alloc] init];
 //    item2.className = @"Testing2";
@@ -57,8 +57,8 @@
 {
     [super viewDidLoad];
     self.GPAItemName = [[NSMutableArray alloc] init];
-//    self.GPAItemNum = [[NSMutableArray alloc] init];
-    [self loadInitialData];
+    //self.GPAItemNum = [[NSMutableArray alloc] init];
+    //[self loadInitialData];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -104,7 +104,6 @@
     GPACal_ClassCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
     GPACal_GPAItem *GPAItem = [self.GPAItemName objectAtIndex:indexPath.row];
-//    GPACal_GPAItem *GPASubItem = [self.GPAItemNum objectAtIndex:indexPath.row];
     
     cell.className.text = GPAItem.className;
     cell.creditsGrade.text = [NSString stringWithFormat:@"%@ - %@", GPAItem.credit, GPAItem.grade];

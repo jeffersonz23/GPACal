@@ -87,6 +87,8 @@
 {
     [super viewDidLoad];
     
+    self.classField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
+    
     // Slider
     self.stepValue = 1.0f;
     self.lastStep = (self.gradeSlider.value) /self.stepValue;
