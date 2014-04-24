@@ -42,10 +42,34 @@
             self.GPAItem.gpa = [NSNumber numberWithDouble:4.00];
             
         } else if ([self.gradeLabel.text isEqual:@"A-"]) {
-            self.GPAItem.gpa = [NSNumber numberWithDouble:3.75];
+            self.GPAItem.gpa = [NSNumber numberWithDouble:3.7];
+            
+        } else if ([self.gradeLabel.text isEqual:@"B+"]) {
+            self.GPAItem.gpa = [NSNumber numberWithDouble:3.3];
             
         } else if ([self.gradeLabel.text isEqual:@"B"]) {
-            //
+            self.GPAItem.gpa = [NSNumber numberWithDouble:3.0];
+            
+        } else if ([self.gradeLabel.text isEqual:@"B-"]) {
+            self.GPAItem.gpa = [NSNumber numberWithDouble:2.7];
+            
+        } else if ([self.gradeLabel.text isEqual:@"C+"]) {
+            self.GPAItem.gpa = [NSNumber numberWithDouble:2.3];
+            
+        } else if ([self.gradeLabel.text isEqual:@"C"]) {
+            self.GPAItem.gpa = [NSNumber numberWithDouble:2.0];
+            
+        } else if ([self.gradeLabel.text isEqual:@"C-"]) {
+            self.GPAItem.gpa = [NSNumber numberWithDouble:1.7];
+            
+        } else if ([self.gradeLabel.text isEqual:@"D+"]) {
+            self.GPAItem.gpa = [NSNumber numberWithDouble:1.3];
+            
+        } else if ([self.gradeLabel.text isEqual:@"D"]) {
+            self.GPAItem.gpa = [NSNumber numberWithDouble:1.0];
+            
+        } else if ([self.gradeLabel.text isEqual:@"F"]) {
+            self.GPAItem.gpa = [NSNumber numberWithDouble:0.0];
         }
     }
 }
@@ -92,26 +116,33 @@
         self.gradeLabel.text = @"A-";
         
     } else if (self.gradeSlider.value == 2) {
-        self.gradeLabel.text = @"B";
+        self.gradeLabel.text = @"B+";
         
     } else if (self.gradeSlider.value == 3) {
-        self.gradeLabel.text = @"B-";
+        self.gradeLabel.text = @"B";
         
     } else if (self.gradeSlider.value == 4) {
-        self.gradeLabel.text = @"C";
+        self.gradeLabel.text = @"B-";
         
     } else if (self.gradeSlider.value == 5) {
-        self.gradeLabel.text = @"C-";
+        self.gradeLabel.text = @"C+";
         
     } else if (self.gradeSlider.value == 6) {
-        self.gradeLabel.text = @"D";
+        self.gradeLabel.text = @"C";
         
     } else if (self.gradeSlider.value == 7) {
-        self.gradeLabel.text = @"D-";
+        self.gradeLabel.text = @"C-";
         
     } else if (self.gradeSlider.value == 8) {
+        self.gradeLabel.text = @"D+";
+        
+    } else if (self.gradeSlider.value == 9) {
+        self.gradeLabel.text = @"D";
+        
+    } else if (self.gradeSlider.value == 10) {
         self.gradeLabel.text = @"F";
     }
+    
 }
 
 - (void)dismissKeyboard {

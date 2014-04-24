@@ -108,7 +108,7 @@
     
     cell.className.text = GPAItem.className;
     cell.creditsGrade.text = [NSString stringWithFormat:@"%@ - %@", GPAItem.credit, GPAItem.grade];
-    cell.GPA.text = [NSString stringWithFormat:@"%.2f", [GPAItem.grade floatValue]];
+    cell.GPA.text = [NSString stringWithFormat:@"%.1f", [GPAItem.gpa floatValue]];
     
     // Configure the cell...
     
