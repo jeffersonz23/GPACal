@@ -38,9 +38,13 @@
         
         // Grade and GPA
         self.GPAItem.grade = self.gradeLabel.text;
-        if ([self.gradeLabel.text  isEqual: @"A"]) {
+        if ([self.gradeLabel.text isEqual: @"A"]) {
             self.GPAItem.gpa = [NSNumber numberWithDouble:4.00];
-        } else if {
+            
+        } else if ([self.gradeLabel.text isEqual:@"A-"]) {
+            self.GPAItem.gpa = [NSNumber numberWithDouble:3.75];
+            
+        } else if ([self.gradeLabel.text isEqual:@"B"]) {
             //
         }
     }
