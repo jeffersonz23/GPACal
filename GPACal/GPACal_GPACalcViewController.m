@@ -172,7 +172,7 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
-
+// Removing tableview entry with swipe button
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //remove the deleted object from your data source.
@@ -182,6 +182,29 @@
         [self.grade removeObjectAtIndex:indexPath.row];
         [self.gpa removeObjectAtIndex:indexPath.row];
         [tableView reloadData]; // tell table to refresh now
+        
+        // Removing from user defaults
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults removeObjectForKey:@"nameClass"];
+        [userDefaults removeObjectForKey:@"credits"];
+        [userDefaults removeObjectForKey:@"grade"];
+        [userDefaults removeObjectForKey:@"gpa"];
+        
+        // Recaculate GPA
+        
+        CGFloat gpa = 0;
+        int total_credits = 0;
+        
+        for( int i = 0; i < [self.nameClass count]; i++) {
+            //        NSLog(@"GPA: %f    Credits: %d", [item.gpa floatValue], [item.credit integerValue]);
+            gpa += [[self.gpa objectAtIndex:i] floatValue] * [[self.credits objectAtIndex:i] integerValue];
+            total_credits += [[self.credits objectAtIndex:i] integerValue];
+        }
+        if ([self.nameClass count]) {
+            self.gradeLabel.text = [NSString stringWithFormat:@"GPA: %.2f", gpa / total_credits];
+        } else {
+            self.gradeLabel.text = @"GPA: ----";
+        }
     }
 }
 

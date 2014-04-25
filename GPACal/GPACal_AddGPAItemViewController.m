@@ -45,33 +45,33 @@
             self.GPAItem.gpa = [NSNumber numberWithDouble:4.00];
             
         } else if ([self.gradeLabel.text isEqual:@"A-"]) {
-            self.GPAItem.gpa = [NSNumber numberWithDouble:3.7];
+            self.GPAItem.gpa = [NSNumber numberWithDouble:3.75];
             
         } else if ([self.gradeLabel.text isEqual:@"B+"]) {
-            self.GPAItem.gpa = [NSNumber numberWithDouble:3.3];
+            self.GPAItem.gpa = [NSNumber numberWithDouble:3.25];
             
         } else if ([self.gradeLabel.text isEqual:@"B"]) {
             self.GPAItem.gpa = [NSNumber numberWithDouble:3.0];
             
         } else if ([self.gradeLabel.text isEqual:@"B-"]) {
-            self.GPAItem.gpa = [NSNumber numberWithDouble:2.7];
+            self.GPAItem.gpa = [NSNumber numberWithDouble:2.75];
             
         } else if ([self.gradeLabel.text isEqual:@"C+"]) {
-            self.GPAItem.gpa = [NSNumber numberWithDouble:2.3];
+            self.GPAItem.gpa = [NSNumber numberWithDouble:2.25];
             
         } else if ([self.gradeLabel.text isEqual:@"C"]) {
             self.GPAItem.gpa = [NSNumber numberWithDouble:2.0];
             
         } else if ([self.gradeLabel.text isEqual:@"C-"]) {
-            self.GPAItem.gpa = [NSNumber numberWithDouble:1.7];
+            self.GPAItem.gpa = [NSNumber numberWithDouble:1.75];
             
         } else if ([self.gradeLabel.text isEqual:@"D+"]) {
-            self.GPAItem.gpa = [NSNumber numberWithDouble:1.3];
+            self.GPAItem.gpa = [NSNumber numberWithDouble:1.5];
             
         } else if ([self.gradeLabel.text isEqual:@"D"]) {
             self.GPAItem.gpa = [NSNumber numberWithDouble:1.0];
             
-        } else if ([self.gradeLabel.text isEqual:@"F"]) {
+        } else {
             self.GPAItem.gpa = [NSNumber numberWithDouble:0.0];
         }
         
