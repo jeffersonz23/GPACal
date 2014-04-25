@@ -31,7 +31,7 @@
     NSMutableArray *array3 = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"grade"] mutableCopy];
     NSMutableArray *array4 = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"gpa"] mutableCopy];
 //    NSMutableArray *retrievedArray = [NSKeyedUnarchiver unarchiveObjectWithData:array];
-    NSLog(@"%lu", (unsigned long)[array count]);
+    //NSLog(@"%lu", (unsigned long)[array count]);
     if (array && array2 && array3 && array4) {
         for( int i = 0; i < [array count]; i++) {
             [self.nameClass addObject:[array objectAtIndex:i]];
@@ -114,7 +114,7 @@
     if ([self.nameClass count]) {
         self.gradeLabel.text = [NSString stringWithFormat:@"GPA: %.2f", gpa / total_credits];
     } else {
-//        self.gradeLabel.text = @"GPA: ----";
+        self.gradeLabel.text = @"GPA: ----";
     }
 }
 
