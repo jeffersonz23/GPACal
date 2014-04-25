@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D42174D1909D724004CA8BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D42174C1909D724004CA8BE /* Main.storyboard */; };
 		4D6118A419032AF100B2519F /* GPACal_AddGPAItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6118A319032AF100B2519F /* GPACal_AddGPAItemViewController.m */; };
-		4D6118A719032CBB00B2519F /* GPACal_GPACalcTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6118A619032CBB00B2519F /* GPACal_GPACalcTableViewController.m */; };
+		4D6118A719032CBB00B2519F /* GPACal_GPACalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6118A619032CBB00B2519F /* GPACal_GPACalcViewController.m */; };
 		4D6118AA1903888800B2519F /* GPACal_GPAItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6118A91903888800B2519F /* GPACal_GPAItem.m */; };
 		4D64AAA51904C51C00AEDE7E /* GPACal_ClassCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D64AAA41904C51C00AEDE7E /* GPACal_ClassCellTableViewCell.m */; };
 		4D9CBF4D1902114A00A708D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9CBF4C1902114A00A708D1 /* Foundation.framework */; };
@@ -40,8 +40,8 @@
 		4D42174C1909D724004CA8BE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4D6118A219032AF100B2519F /* GPACal_AddGPAItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPACal_AddGPAItemViewController.h; sourceTree = "<group>"; };
 		4D6118A319032AF100B2519F /* GPACal_AddGPAItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPACal_AddGPAItemViewController.m; sourceTree = "<group>"; };
-		4D6118A519032CBB00B2519F /* GPACal_GPACalcTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPACal_GPACalcTableViewController.h; sourceTree = "<group>"; };
-		4D6118A619032CBB00B2519F /* GPACal_GPACalcTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPACal_GPACalcTableViewController.m; sourceTree = "<group>"; };
+		4D6118A519032CBB00B2519F /* GPACal_GPACalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPACal_GPACalcViewController.h; sourceTree = "<group>"; };
+		4D6118A619032CBB00B2519F /* GPACal_GPACalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPACal_GPACalcViewController.m; sourceTree = "<group>"; };
 		4D6118A81903888800B2519F /* GPACal_GPAItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPACal_GPAItem.h; sourceTree = "<group>"; };
 		4D6118A91903888800B2519F /* GPACal_GPAItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPACal_GPAItem.m; sourceTree = "<group>"; };
 		4D64AAA31904C51C00AEDE7E /* GPACal_ClassCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPACal_ClassCellTableViewCell.h; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 				4D42174C1909D724004CA8BE /* Main.storyboard */,
 				4D64AAA31904C51C00AEDE7E /* GPACal_ClassCellTableViewCell.h */,
 				4D64AAA41904C51C00AEDE7E /* GPACal_ClassCellTableViewCell.m */,
-				4D6118A519032CBB00B2519F /* GPACal_GPACalcTableViewController.h */,
-				4D6118A619032CBB00B2519F /* GPACal_GPACalcTableViewController.m */,
+				4D6118A519032CBB00B2519F /* GPACal_GPACalcViewController.h */,
+				4D6118A619032CBB00B2519F /* GPACal_GPACalcViewController.m */,
 				4D9CBF5B1902114A00A708D1 /* GPACal_AppDelegate.h */,
 				4D9CBF5C1902114A00A708D1 /* GPACal_AppDelegate.m */,
 				4D9CBF5E1902114A00A708D1 /* Images.xcassets */,
@@ -269,7 +269,7 @@
 				4D64AAA51904C51C00AEDE7E /* GPACal_ClassCellTableViewCell.m in Sources */,
 				4D9CBF591902114A00A708D1 /* main.m in Sources */,
 				4D6118A419032AF100B2519F /* GPACal_AddGPAItemViewController.m in Sources */,
-				4D6118A719032CBB00B2519F /* GPACal_GPACalcTableViewController.m in Sources */,
+				4D6118A719032CBB00B2519F /* GPACal_GPACalcViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

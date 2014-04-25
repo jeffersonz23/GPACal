@@ -6,18 +6,19 @@
 //  Copyright (c) 2014 Andrew Robinson. All rights reserved.
 //
 
-#import "GPACal_GPACalcTableViewController.h"
+#import "GPACal_GPACalcViewController.h"
 #import "GPACal_GPAItem.h"
 #import "GPACal_AddGPAItemViewController.h"
 #import "GPACal_ClassCellTableViewCell.h"
 
-@interface GPACal_GPACalcTableViewController ()
+@interface GPACal_GPACalcViewController ()
 
 @property NSMutableArray *GPAItemName;
+@property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
 
 @end
 
-@implementation GPACal_GPACalcTableViewController
+@implementation GPACal_GPACalcViewController
 
 - (void)loadInitialData {
     GPACal_GPAItem *item1 = [[GPACal_GPAItem alloc] init];
@@ -44,15 +45,6 @@
     
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -66,6 +58,27 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    CGFloat gpa = 0;
+    int total_credits = 0;
+
+    for (GPACal_GPAItem *item in self.GPAItemName) {
+        NSLog(@"GPA: %f    Credits: %d", [item.gpa floatValue], [item.credit integerValue]);
+        gpa += [item.gpa floatValue] * [item.credit integerValue];
+        total_credits += [item.credit integerValue];
+    }
+    
+    NSLog(@"GPA tot: %f", gpa);
+    NSLog(@"total cred: %d", total_credits);
+
+    if ([self.GPAItemName count]) {
+        self.gradeLabel.text = [NSString stringWithFormat:@"GPA: %.2f", gpa / total_credits];
+    } else {
+        self.gradeLabel.text = @"GPA: ----";
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GPACal_GPACalcTableViewController : UITableViewController
+@interface GPACal_GPACalcViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue;
 
