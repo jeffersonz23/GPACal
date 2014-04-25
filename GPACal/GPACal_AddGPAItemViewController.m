@@ -27,6 +27,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if (sender != self.doneButton) return;
     if (self.classField.text.length > 0) {
+//        NSMutableArray *array = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"nameClass"] mutableCopy];
+//        NSLog(@"Adding %lu", (unsigned long)[array count]);
+
         self.GPAItem = [[GPACal_GPAItem alloc] init];
         
         // class name
@@ -71,6 +74,10 @@
         } else if ([self.gradeLabel.text isEqual:@"F"]) {
             self.GPAItem.gpa = [NSNumber numberWithDouble:0.0];
         }
+        
+        // Storing userdata
+        //NSUserDefaults *userDefaults = [NSUserDefaults]
+        
     }
 }
 

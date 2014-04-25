@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RVg-D8-eha">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RVg-D8-eha">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -16,40 +16,44 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GPA: 3.71" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JB-MY-Ic7">
-                                <rect key="frame" x="0.0" y="277" width="320" height="80"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA: 3.71" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JB-MY-Ic7">
+                                <rect key="frame" x="0.0" y="418" width="320" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="AT2-vK-VIg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lhY-bU-F9b">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
+                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lhY-bU-F9b">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClassCell" rowHeight="77" id="w9B-aR-ac0" customClass="GPACal_ClassCellTableViewCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="77"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClassCell" rowHeight="76" id="w9B-aR-ac0" customClass="GPACal_ClassCellTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w9B-aR-ac0" id="deE-O9-pxb">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osx-H8-tTi">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osx-H8-tTi">
                                                     <rect key="frame" x="20" y="9" width="203" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <color key="textColor" red="0.2953332031" green="0.4429242303" blue="0.63191565689999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits - Grade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-BP-t1M">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits - Grade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-BP-t1M">
                                                     <rect key="frame" x="20" y="36" width="119" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.2953332031" green="0.4429242303" blue="0.63191565689999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GPA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USA-JI-ZfU">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GPA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USA-JI-ZfU">
                                                     <rect key="frame" x="231" y="22" width="69" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -57,6 +61,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="VbQ-BP-t1M" secondAttribute="bottom" constant="10" id="Cax-sN-kbx"/>
+                                                <constraint firstItem="Osx-H8-tTi" firstAttribute="leading" secondItem="VbQ-BP-t1M" secondAttribute="leading" id="QSY-BO-zLB"/>
+                                                <constraint firstAttribute="trailing" secondItem="USA-JI-ZfU" secondAttribute="trailing" constant="20" symbolic="YES" id="TTM-Yj-jFt"/>
+                                                <constraint firstItem="Osx-H8-tTi" firstAttribute="leading" secondItem="deE-O9-pxb" secondAttribute="leading" constant="20" symbolic="YES" id="hce-jS-luc"/>
+                                                <constraint firstItem="USA-JI-ZfU" firstAttribute="top" secondItem="deE-O9-pxb" secondAttribute="top" constant="22" id="nha-XV-qdW"/>
+                                                <constraint firstAttribute="bottom" secondItem="USA-JI-ZfU" secondAttribute="bottom" constant="23" id="uQH-Q5-0ub"/>
+                                                <constraint firstItem="VbQ-BP-t1M" firstAttribute="top" secondItem="deE-O9-pxb" secondAttribute="top" constant="36" id="vsy-6U-TtG"/>
+                                                <constraint firstItem="Osx-H8-tTi" firstAttribute="top" secondItem="deE-O9-pxb" secondAttribute="top" constant="9" id="zeK-kv-37p"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="GPA" destination="USA-JI-ZfU" id="DuA-Ed-sI5"/>
@@ -72,7 +86,16 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2953332031" green="0.4429242303" blue="0.63191565689999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7JB-MY-Ic7" firstAttribute="top" secondItem="lhY-bU-F9b" secondAttribute="bottom" constant="2" id="4hn-6z-fAy"/>
+                            <constraint firstItem="7JB-MY-Ic7" firstAttribute="leading" secondItem="n68-XN-LYT" secondAttribute="leading" id="8K1-9A-SC1"/>
+                            <constraint firstItem="7JB-MY-Ic7" firstAttribute="trailing" secondItem="lhY-bU-F9b" secondAttribute="trailing" id="9AE-YO-uf5"/>
+                            <constraint firstItem="7JB-MY-Ic7" firstAttribute="top" secondItem="lhY-bU-F9b" secondAttribute="bottom" constant="2" id="PaS-AU-gEq"/>
+                            <constraint firstAttribute="trailing" secondItem="7JB-MY-Ic7" secondAttribute="trailing" id="fek-uJ-Y3O"/>
+                            <constraint firstItem="yyc-Pg-Tye" firstAttribute="top" secondItem="7JB-MY-Ic7" secondAttribute="bottom" id="qGb-lQ-U5a"/>
+                            <constraint firstItem="7JB-MY-Ic7" firstAttribute="leading" secondItem="lhY-bU-F9b" secondAttribute="leading" id="xis-YH-gT7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="GPA Calculator" id="LZU-Y1-AWt">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kd7-ld-P7K">
@@ -89,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbd-uk-8MJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2664" y="848"/>
+            <point key="canvasLocation" x="2690" y="170"/>
         </scene>
         <!--Cal AddGPA Item View Controller - New Entry-->
         <scene sceneID="W9h-H2-W6F">
@@ -192,7 +215,7 @@
                 <tapGestureRecognizer id="WC9-zd-KSL"/>
                 <exit id="CH6-hV-mUN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3667" y="170"/>
+            <point key="canvasLocation" x="3727" y="170"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3dj-E1-Ya0">
@@ -229,7 +252,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzg-u6-ZvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3096" y="-88"/>
+            <point key="canvasLocation" x="3302" y="170"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
