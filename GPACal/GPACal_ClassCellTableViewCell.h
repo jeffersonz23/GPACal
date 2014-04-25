@@ -10,8 +10,8 @@
 
 @interface GPACal_ClassCellTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *className;
 @property (weak, nonatomic) IBOutlet UILabel *creditsGrade;
 @property (weak, nonatomic) IBOutlet UILabel *GPA;
+@property (weak, nonatomic) IBOutlet UILabel *className;
 
 @end
