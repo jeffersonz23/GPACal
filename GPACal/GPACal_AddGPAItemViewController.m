@@ -94,6 +94,7 @@
 {
     [super viewDidLoad];
     
+    // Capitlizing first letter of textfields
     self.classField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
     
     // Slider
@@ -103,6 +104,9 @@
     // Textfield keyboard hide
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
+    
+    // Auto select textfield
+//    [self.classField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning

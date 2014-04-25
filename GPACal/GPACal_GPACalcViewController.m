@@ -11,6 +11,8 @@
 #import "GPACal_AddGPAItemViewController.h"
 #import "GPACal_ClassCellTableViewCell.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @interface GPACal_GPACalcViewController ()
 
 //@property NSMutableArray *GPAItemName;
@@ -82,6 +84,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Color change
+    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0xF7F7F7);
+    self.navigationController.navigationBar.tintColor = UIColorFromRGB(0xF7F7F7);
+    self.navigationController.navigationBar.translucent = NO;
+//    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:247.0/255 green:247.0/255 blue:247.0/255 alpha:1.0];
+//    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:247.0/255 green:247.0/255 blue:247.0/255 alpha:1.0];
+
+    
     self.credits = [[NSMutableArray alloc] init];
     self.nameClass = [[NSMutableArray alloc] init];
     self.gpa = [[NSMutableArray alloc] init];
@@ -162,7 +173,7 @@
     
     cell.className.text = GPAItem.className;
     cell.creditsGrade.text = [NSString stringWithFormat:@"Credits: %@ Grade: %@", GPAItem.credit, GPAItem.grade];
-    cell.GPA.text = [NSString stringWithFormat:@"%.1f", [GPAItem.gpa floatValue]];
+    cell.GPA.text = [NSString stringWithFormat:@"%.2f", [GPAItem.gpa floatValue]];
     
     // Configure the cell...
     
@@ -182,6 +193,10 @@
         [self.grade removeObjectAtIndex:indexPath.row];
         [self.gpa removeObjectAtIndex:indexPath.row];
         [tableView reloadData]; // tell table to refresh now
+        
+//        [self.tableView beginUpdates];
+//        [self.tableView deleteRowsAtIndexPaths:indexPath withRowAnimation:UITableViewRowAnimationFade];
+//        [self.tableView endUpdates];
         
         // Removing from user defaults
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
