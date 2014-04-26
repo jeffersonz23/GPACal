@@ -21,6 +21,7 @@
 @property NSMutableArray *gpa;
 @property NSMutableArray *grade;
 @property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *noData;
 
 @end
 
@@ -78,7 +79,6 @@
 //        [self.GPAItemNum addObject:item];
         [self.tableView reloadData];
     }
-    
 }
 
 - (void)viewDidLoad
@@ -89,16 +89,32 @@
     self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0xF7F7F7);
     self.navigationController.navigationBar.tintColor = UIColorFromRGB(0xF7F7F7);
     self.navigationController.navigationBar.translucent = NO;
-//    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:247.0/255 green:247.0/255 blue:247.0/255 alpha:1.0];
-//    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:247.0/255 green:247.0/255 blue:247.0/255 alpha:1.0];
-
     
     self.credits = [[NSMutableArray alloc] init];
     self.nameClass = [[NSMutableArray alloc] init];
     self.gpa = [[NSMutableArray alloc] init];
     self.grade = [[NSMutableArray alloc] init];
-    //self.GPAItemNum = [[NSMutableArray alloc] init];
     [self loadInitialData];
+    
+    
+//    _nomatchesView = [[UIView alloc] initWithFrame:self.view.frame];
+//    _nomatchesView.backgroundColor = [UIColor clearColor];
+//    
+//    UILabel *matchesLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,320,320)];
+//    matchesLabel.font = [UIFont boldSystemFontOfSize:18];
+//    matchesLabel.numberOfLines = 1;
+//    matchesLabel.shadowColor = [UIColor lightTextColor];
+//    matchesLabel.textColor = [UIColor darkGrayColor];
+//    matchesLabel.shadowOffset = CGSizeMake(0, 1);
+//    matchesLabel.backgroundColor = [UIColor clearColor];
+//    
+//    //Here is the text for when there are no results
+//    matchesLabel.text = @"Click the + to add entries!";
+//    
+//    
+//    _nomatchesView.hidden = YES;
+//    [_nomatchesView addSubview:matchesLabel];
+//    [self.tableView insertSubview:_nomatchesView belowSubview:self.tableView];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -145,16 +161,21 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
+    if ([self.nameClass count] != 0)
+        [self.noData removeFromSuperview];
+
     // Return the number of rows in the section.
     return [self.nameClass count];
 }
 
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row%2 == 0) {
-        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
-        cell.backgroundColor = altCellColor;
-    }
+//    if (indexPath.row%2 == 0) {
+//        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
+//        cell.backgroundColor = altCellColor;
+//        
+//    }
 }
 
 
@@ -183,20 +204,19 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
+
 // Removing tableview entry with swipe button
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //remove the deleted object from your data source.
         //If your data source is an NSMutableArray, do this
+        [tableView beginUpdates];
         [self.nameClass removeObjectAtIndex:indexPath.row];
         [self.credits removeObjectAtIndex:indexPath.row];
         [self.grade removeObjectAtIndex:indexPath.row];
         [self.gpa removeObjectAtIndex:indexPath.row];
-        [tableView reloadData]; // tell table to refresh now
         
-//        [self.tableView beginUpdates];
-//        [self.tableView deleteRowsAtIndexPaths:indexPath withRowAnimation:UITableViewRowAnimationFade];
-//        [self.tableView endUpdates];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationRight];
         
         // Removing from user defaults
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -220,6 +240,12 @@
         } else {
             self.gradeLabel.text = @"GPA: ----";
         }
+        
+        [tableView endUpdates];
+        
+//        [tableView beginUpdates];
+//        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
+//        [tableView endUpdates];
     }
 }
 

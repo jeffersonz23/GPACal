@@ -14,4 +14,6 @@
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue;
 
+@property UIView *nomatchesView;
+
 @end

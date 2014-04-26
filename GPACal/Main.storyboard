@@ -27,12 +27,20 @@
                                 <color key="textColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lhY-bU-F9b">
+                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lhY-bU-F9b">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="separatorColor" red="0.79215693470000004" green="0.93725496529999996" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" red="0.79215693470000004" green="0.93725496529999996" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
+                                <label key="tableFooterView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the + to add entries!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NWc-3d-OGf">
+                                    <rect key="frame" x="0.0" y="98" width="320" height="420"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <color key="textColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClassCell" rowHeight="76" id="w9B-aR-ac0" customClass="GPACal_ClassCellTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="76"/>
@@ -48,14 +56,14 @@
                                                     <color key="textColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Credits - Grade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-BP-t1M">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits - Grade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-BP-t1M">
                                                     <rect key="frame" x="20" y="36" width="119" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GPA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USA-JI-ZfU">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USA-JI-ZfU">
                                                     <rect key="frame" x="231" y="22" width="69" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -65,13 +73,14 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="VbQ-BP-t1M" secondAttribute="bottom" constant="10" id="Cax-sN-kbx"/>
+                                                <constraint firstItem="USA-JI-ZfU" firstAttribute="leading" secondItem="Osx-H8-tTi" secondAttribute="trailing" constant="8" symbolic="YES" id="3QF-p8-Y0U"/>
+                                                <constraint firstAttribute="bottom" secondItem="VbQ-BP-t1M" secondAttribute="bottom" constant="9" id="Cax-sN-kbx"/>
                                                 <constraint firstItem="Osx-H8-tTi" firstAttribute="leading" secondItem="VbQ-BP-t1M" secondAttribute="leading" id="QSY-BO-zLB"/>
                                                 <constraint firstAttribute="trailing" secondItem="USA-JI-ZfU" secondAttribute="trailing" constant="20" symbolic="YES" id="TTM-Yj-jFt"/>
                                                 <constraint firstItem="Osx-H8-tTi" firstAttribute="leading" secondItem="deE-O9-pxb" secondAttribute="leading" constant="20" symbolic="YES" id="hce-jS-luc"/>
                                                 <constraint firstAttribute="trailing" secondItem="Osx-H8-tTi" secondAttribute="trailing" constant="97" id="jdZ-nH-WVt"/>
                                                 <constraint firstItem="USA-JI-ZfU" firstAttribute="top" secondItem="deE-O9-pxb" secondAttribute="top" constant="22" id="nha-XV-qdW"/>
-                                                <constraint firstAttribute="bottom" secondItem="USA-JI-ZfU" secondAttribute="bottom" constant="23" id="uQH-Q5-0ub"/>
+                                                <constraint firstAttribute="bottom" secondItem="USA-JI-ZfU" secondAttribute="bottom" constant="22" id="uQH-Q5-0ub"/>
                                                 <constraint firstItem="VbQ-BP-t1M" firstAttribute="top" secondItem="deE-O9-pxb" secondAttribute="top" constant="36" id="vsy-6U-TtG"/>
                                                 <constraint firstItem="Osx-H8-tTi" firstAttribute="top" secondItem="deE-O9-pxb" secondAttribute="top" constant="9" id="zeK-kv-37p"/>
                                             </constraints>
@@ -93,13 +102,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
+                            <constraint firstItem="lhY-bU-F9b" firstAttribute="top" secondItem="n68-XN-LYT" secondAttribute="top" id="37A-81-gYo"/>
                             <constraint firstItem="7JB-MY-Ic7" firstAttribute="top" secondItem="lhY-bU-F9b" secondAttribute="bottom" constant="2" id="4hn-6z-fAy"/>
                             <constraint firstItem="7JB-MY-Ic7" firstAttribute="leading" secondItem="n68-XN-LYT" secondAttribute="leading" id="8K1-9A-SC1"/>
-                            <constraint firstItem="7JB-MY-Ic7" firstAttribute="trailing" secondItem="lhY-bU-F9b" secondAttribute="trailing" id="9AE-YO-uf5"/>
+                            <constraint firstItem="lhY-bU-F9b" firstAttribute="trailing" secondItem="7JB-MY-Ic7" secondAttribute="trailing" id="IPf-GU-sGY"/>
+                            <constraint firstItem="lhY-bU-F9b" firstAttribute="leading" secondItem="7JB-MY-Ic7" secondAttribute="leading" id="LXZ-MI-MOq"/>
                             <constraint firstItem="7JB-MY-Ic7" firstAttribute="top" secondItem="lhY-bU-F9b" secondAttribute="bottom" constant="2" id="PaS-AU-gEq"/>
                             <constraint firstAttribute="trailing" secondItem="7JB-MY-Ic7" secondAttribute="trailing" id="fek-uJ-Y3O"/>
                             <constraint firstItem="yyc-Pg-Tye" firstAttribute="top" secondItem="7JB-MY-Ic7" secondAttribute="bottom" id="qGb-lQ-U5a"/>
-                            <constraint firstItem="7JB-MY-Ic7" firstAttribute="leading" secondItem="lhY-bU-F9b" secondAttribute="leading" id="xis-YH-gT7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="GPA Calculator" id="LZU-Y1-AWt">
@@ -112,12 +122,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="gradeLabel" destination="7JB-MY-Ic7" id="JRN-gS-wl0"/>
+                        <outlet property="noData" destination="NWc-3d-OGf" id="nQs-ZS-IeQ"/>
                         <outlet property="tableView" destination="lhY-bU-F9b" id="nvb-1C-XEe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbd-uk-8MJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1987" y="16"/>
+            <point key="canvasLocation" x="573" y="67"/>
         </scene>
         <!--Cal AddGPA Item View Controller - New Entry-->
         <scene sceneID="W9h-H2-W6F">
@@ -136,7 +147,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="tintColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="textColor" red="0.0" green="0.8980392814" blue="0.40392160420000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -190,7 +201,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
-                        <color key="tintColor" red="0.0" green="0.8980392814" blue="0.40392160420000001" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="WC9-zd-KSL" appends="YES" id="3Pd-zR-MMs"/>
@@ -222,7 +233,7 @@
                 <tapGestureRecognizer id="WC9-zd-KSL"/>
                 <exit id="CH6-hV-mUN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3024" y="16"/>
+            <point key="canvasLocation" x="1610" y="67"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3dj-E1-Ya0">
@@ -240,7 +251,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c79-5E-F76" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1554" y="16"/>
+            <point key="canvasLocation" x="140" y="67"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tRd-CU-4Cm">
@@ -259,7 +270,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzg-u6-ZvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2599" y="16"/>
+            <point key="canvasLocation" x="1185" y="67"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
