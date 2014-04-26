@@ -78,6 +78,13 @@
         // Storing userdata
         //NSUserDefaults *userDefaults = [NSUserDefaults]
         
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hey, you have an error."
+                                                        message:@"You must enter a class name!"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
     }
 }
 
