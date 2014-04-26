@@ -22,6 +22,7 @@
 @property NSMutableArray *grade;
 @property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *noData;
+@property (weak, nonatomic) IBOutlet UILabel *layover;
 
 @end
 
@@ -200,6 +201,9 @@
         } else {
             self.gradeLabel.text = @"GPA: ----";
         }
+        
+        if ([self.nameClass count] == 0)
+            [self.view addSubview:_noData];
         
         [tableView endUpdates];
         
