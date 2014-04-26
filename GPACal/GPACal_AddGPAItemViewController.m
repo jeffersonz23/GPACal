@@ -27,8 +27,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if (sender != self.doneButton) return;
     if (self.classField.text.length > 0) {
-//        NSMutableArray *array = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"nameClass"] mutableCopy];
-//        NSLog(@"Adding %lu", (unsigned long)[array count]);
 
         self.GPAItem = [[GPACal_GPAItem alloc] init];
         
@@ -75,9 +73,6 @@
             self.GPAItem.gpa = [NSNumber numberWithDouble:0.0];
         }
         
-        // Storing userdata
-        //NSUserDefaults *userDefaults = [NSUserDefaults]
-        
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hey, you have an error."
                                                         message:@"You must enter a class name!"
@@ -111,9 +106,6 @@
     // Textfield keyboard hide
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
-    
-    // Auto select textfield
-//    [self.classField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
