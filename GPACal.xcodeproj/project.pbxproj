@@ -24,6 +24,8 @@
 		4D9CBF681902114A00A708D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9CBF501902114A00A708D1 /* UIKit.framework */; };
 		4D9CBF701902114A00A708D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CBF6E1902114A00A708D1 /* InfoPlist.strings */; };
 		4D9CBF721902114A00A708D1 /* GPACalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CBF711902114A00A708D1 /* GPACalTests.m */; };
+		4DFF5671190EFB8E007664C4 /* GPACal_AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF5670190EFB8E007664C4 /* GPACal_AboutViewController.m */; };
+		4DFF5673190F0200007664C4 /* 402-Faceit-SirArkimedes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DFF5672190F0200007664C4 /* 402-Faceit-SirArkimedes.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		4D9CBF6D1902114A00A708D1 /* GPACalTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GPACalTests-Info.plist"; sourceTree = "<group>"; };
 		4D9CBF6F1902114A00A708D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4D9CBF711902114A00A708D1 /* GPACalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPACalTests.m; sourceTree = "<group>"; };
+		4DFF566F190EFB8E007664C4 /* GPACal_AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPACal_AboutViewController.h; sourceTree = "<group>"; };
+		4DFF5670190EFB8E007664C4 /* GPACal_AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPACal_AboutViewController.m; sourceTree = "<group>"; };
+		4DFF5672190F0200007664C4 /* 402-Faceit-SirArkimedes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "402-Faceit-SirArkimedes.jpg"; path = "../../../402-Faceit-SirArkimedes.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,11 +126,14 @@
 		4D9CBF521902114A00A708D1 /* GPACal */ = {
 			isa = PBXGroup;
 			children = (
+				4DFF5672190F0200007664C4 /* 402-Faceit-SirArkimedes.jpg */,
 				4D6118A81903888800B2519F /* GPACal_GPAItem.h */,
 				4D6118A91903888800B2519F /* GPACal_GPAItem.m */,
 				4D6118A219032AF100B2519F /* GPACal_AddGPAItemViewController.h */,
 				4D6118A319032AF100B2519F /* GPACal_AddGPAItemViewController.m */,
 				4D42174C1909D724004CA8BE /* Main.storyboard */,
+				4DFF566F190EFB8E007664C4 /* GPACal_AboutViewController.h */,
+				4DFF5670190EFB8E007664C4 /* GPACal_AboutViewController.m */,
 				4D64AAA31904C51C00AEDE7E /* GPACal_ClassCellTableViewCell.h */,
 				4D64AAA41904C51C00AEDE7E /* GPACal_ClassCellTableViewCell.m */,
 				4D6118A519032CBB00B2519F /* GPACal_GPACalcViewController.h */,
@@ -244,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D42174D1909D724004CA8BE /* Main.storyboard in Resources */,
+				4DFF5673190F0200007664C4 /* 402-Faceit-SirArkimedes.jpg in Resources */,
 				4D9CBF571902114A00A708D1 /* InfoPlist.strings in Resources */,
 				4D9CBF5F1902114A00A708D1 /* Images.xcassets in Resources */,
 			);
@@ -264,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFF5671190EFB8E007664C4 /* GPACal_AboutViewController.m in Sources */,
 				4D6118AA1903888800B2519F /* GPACal_GPAItem.m in Sources */,
 				4D9CBF5D1902114A00A708D1 /* GPACal_AppDelegate.m in Sources */,
 				4D64AAA51904C51C00AEDE7E /* GPACal_ClassCellTableViewCell.m in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RVg-D8-eha">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RVg-D8-eha">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -35,7 +35,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
                                 <label key="tableFooterView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the + to add entries!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NWc-3d-OGf">
-                                    <rect key="frame" x="0.0" y="98" width="320" height="374"/>
+                                    <rect key="frame" x="0.0" y="98" width="320" height="200"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -115,6 +115,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="GPA Calculator" id="LZU-Y1-AWt">
+                        <barButtonItem key="leftBarButtonItem" title="About" id="CGt-mS-wor">
+                            <color key="tintColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <segue destination="fbt-bL-DSo" kind="modal" modalTransitionStyle="crossDissolve" id="so1-7a-9mK"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kd7-ld-P7K">
                             <color key="tintColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
@@ -132,6 +138,67 @@
             </objects>
             <point key="canvasLocation" x="573" y="67"/>
         </scene>
+        <!--Cal About View Controller - About-->
+        <scene sceneID="Z9b-Qi-s55">
+            <objects>
+                <viewController id="cb8-Sv-BEF" customClass="GPACal_AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wrV-za-25m"/>
+                        <viewControllerLayoutGuide type="bottom" id="YTn-2q-wYv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AwQ-yC-MwZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="402-Faceit-SirArkimedes.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZcT-ja-Wvd">
+                                <rect key="frame" x="91" y="76" width="139" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H15-Pg-dV7">
+                                <rect key="frame" x="-19" y="249" width="341" height="336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zY7-wp-BYG">
+                                        <rect key="frame" x="20" y="6" width="321" height="310"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="310" id="tI1-V9-KEv"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="App name: GPA Calc Developer: Andrew Robinson v 1.0  I don't know what to put here.">
+                                                <attributes>
+                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="mId-zE-K0R">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Rmc-Nk-LNi">
+                            <color key="tintColor" red="0.97647064924240112" green="0.0" blue="0.047058828175067902" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <segue destination="OMN-d9-t1t" kind="unwind" unwindAction="unwindToList:" id="DEw-Ps-Duq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancel" destination="Rmc-Nk-LNi" id="nHP-B3-J4s"/>
+                        <outlet property="profileImage" destination="ZcT-ja-Wvd" id="hF2-1U-A4y"/>
+                        <outlet property="scrollView" destination="H15-Pg-dV7" id="KSI-mV-O7C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="43F-Yh-rYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OMN-d9-t1t" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1652" y="434"/>
+        </scene>
         <!--Cal AddGPA Item View Controller - New Entry-->
         <scene sceneID="W9h-H2-W6F">
             <objects>
@@ -144,7 +211,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3da-cA-dvk">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3da-cA-dvk">
                                 <rect key="frame" x="23" y="116" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
@@ -235,7 +302,7 @@
                 <tapGestureRecognizer id="WC9-zd-KSL"/>
                 <exit id="CH6-hV-mUN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1610" y="67"/>
+            <point key="canvasLocation" x="1652" y="-327"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3dj-E1-Ya0">
@@ -272,9 +339,31 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzg-u6-ZvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1185" y="67"/>
+            <point key="canvasLocation" x="1227" y="-327"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GM8-q4-Arg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fbt-bL-DSo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Bev-6I-PDc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ybp-AK-kMa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cb8-Sv-BEF" kind="relationship" relationship="rootViewController" id="xZ5-fB-uJr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7pf-Pm-T9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1227" y="434"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="402-Faceit-SirArkimedes.jpg" width="1426" height="1641"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

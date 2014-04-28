@@ -10,6 +10,7 @@
 #import "GPACal_GPAItem.h"
 #import "GPACal_AddGPAItemViewController.h"
 #import "GPACal_ClassCellTableViewCell.h"
+#import "GPACal_AboutViewController.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -54,7 +55,9 @@
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
     
     GPACal_AddGPAItemViewController *source = [segue sourceViewController];
+//    GPACal_AboutViewController *source1 = [segue sourceViewController];
     GPACal_GPAItem *item = source.GPAItem;
+//    GPACal_GPAItem *item2 = source1.aboutItem;
     if (item != nil) {
         [self.credits addObject:item.credit];
         [self.nameClass addObject:item.className];
@@ -70,6 +73,8 @@
         [userDefaults synchronize];
         
         [self.tableView reloadData];
+    } else {
+        NSLog(@"Unwound.");
     }
 }
 
