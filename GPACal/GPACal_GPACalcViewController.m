@@ -110,7 +110,7 @@
             self.addItemView.textAlignment = NSTextAlignmentCenter;
             
             [UIView transitionWithView:self.view duration:0.5
-                               options:UIViewAnimationTransitionNone //change to whatever animation you like
+                               options:UIViewAnimationOptionCurveLinear //change to whatever animation you like
                             animations:^ {
                                 self.tableView.separatorColor = UIColorFromRGB( 0xf5f5f5 );
                                 self.addItemView.frame = CGRectMake( 0.0f, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f); //notice this is ON screen!
@@ -223,14 +223,14 @@
             [CATransaction setCompletionBlock: ^{
                 NSLog(@"Cell showing...");
                 
-                self.addItemView = [[UILabel alloc] initWithFrame:CGRectMake( self.tableView.frame.size.width, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f)]; //notice this is ON screen!
+                self.addItemView = [[UILabel alloc] initWithFrame:CGRectMake( self.tableView.frame.size.width, self.tableView.frame.size.height/2 - 5, self.tableView.frame.size.width, 50.0f)]; //notice this is ON screen!
                 self.addItemView.text = @"Click + to add courses!";
                 self.addItemView.font = [UIFont systemFontOfSize:24.0f];
                 self.addItemView.textColor = UIColorFromRGB(0x34AADC);
                 self.addItemView.textAlignment = NSTextAlignmentCenter;
                 
                 [UIView transitionWithView:self.view duration:0.5
-                                   options:UIViewAnimationTransitionNone //change to whatever animation you like
+                                   options:UIViewAnimationOptionCurveLinear //change to whatever animation you like
                                 animations:^ {
                                     self.tableView.separatorColor = UIColorFromRGB( 0xf5f5f5 );
                                     self.addItemView.frame = CGRectMake( 0.0f, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f); //notice this is ON screen!
