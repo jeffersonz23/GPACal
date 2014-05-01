@@ -61,14 +61,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits - Grade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-BP-t1M">
-                                                    <rect key="frame" x="20" y="36" width="119" height="30"/>
+                                                    <rect key="frame" x="20" y="36" width="100" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USA-JI-ZfU">
-                                                    <rect key="frame" x="231" y="22" width="69" height="31"/>
+                                                    <rect key="frame" x="241" y="22" width="69" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                     <color key="textColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
@@ -77,10 +77,10 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
                                             <constraints>
-                                                <constraint firstItem="USA-JI-ZfU" firstAttribute="leading" secondItem="Osx-H8-tTi" secondAttribute="trailing" constant="8" symbolic="YES" id="3QF-p8-Y0U"/>
+                                                <constraint firstItem="USA-JI-ZfU" firstAttribute="leading" secondItem="Osx-H8-tTi" secondAttribute="trailing" constant="18" id="3QF-p8-Y0U"/>
                                                 <constraint firstAttribute="bottom" secondItem="VbQ-BP-t1M" secondAttribute="bottom" constant="9" id="Cax-sN-kbx"/>
                                                 <constraint firstItem="Osx-H8-tTi" firstAttribute="leading" secondItem="VbQ-BP-t1M" secondAttribute="leading" id="QSY-BO-zLB"/>
-                                                <constraint firstAttribute="trailing" secondItem="USA-JI-ZfU" secondAttribute="trailing" constant="20" symbolic="YES" id="TTM-Yj-jFt"/>
+                                                <constraint firstAttribute="trailing" secondItem="USA-JI-ZfU" secondAttribute="trailing" constant="10" id="TTM-Yj-jFt"/>
                                                 <constraint firstItem="Osx-H8-tTi" firstAttribute="leading" secondItem="deE-O9-pxb" secondAttribute="leading" constant="20" symbolic="YES" id="hce-jS-luc"/>
                                                 <constraint firstAttribute="trailing" secondItem="Osx-H8-tTi" secondAttribute="trailing" constant="97" id="jdZ-nH-WVt"/>
                                                 <constraint firstItem="USA-JI-ZfU" firstAttribute="top" secondItem="deE-O9-pxb" secondAttribute="top" constant="22" id="nha-XV-qdW"/>
@@ -121,10 +121,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="GPA Calculator" id="LZU-Y1-AWt">
-                        <barButtonItem key="leftBarButtonItem" title="About" id="CGt-mS-wor">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="cct-Sm-vbq">
                             <color key="tintColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
-                                <segue destination="fbt-bL-DSo" kind="modal" modalTransitionStyle="crossDissolve" id="so1-7a-9mK"/>
+                                <action selector="startEditing:" destination="OzL-S2-jYx" id="18b-21-7Df"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kd7-ld-P7K">
@@ -144,64 +144,6 @@
             </objects>
             <point key="canvasLocation" x="573" y="67"/>
         </scene>
-        <!--Cal About View Controller - About-->
-        <scene sceneID="Z9b-Qi-s55">
-            <objects>
-                <viewController id="cb8-Sv-BEF" customClass="GPACal_AboutViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wrV-za-25m"/>
-                        <viewControllerLayoutGuide type="bottom" id="YTn-2q-wYv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AwQ-yC-MwZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="402-Faceit-SirArkimedes.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZcT-ja-Wvd">
-                                <rect key="frame" x="91" y="76" width="139" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H15-Pg-dV7">
-                                <rect key="frame" x="-19" y="249" width="341" height="336"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zY7-wp-BYG">
-                                        <rect key="frame" x="20" y="6" width="321" height="310"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="App name: GPA Calc Developer: Andrew Robinson v 1.0  Student developer, welcoming any suggestions and reviews of any kind.">
-                                                <attributes>
-                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="About" id="mId-zE-K0R">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Rmc-Nk-LNi">
-                            <color key="tintColor" red="0.97647064924240112" green="0.0" blue="0.047058828175067902" alpha="1" colorSpace="deviceRGB"/>
-                            <connections>
-                                <segue destination="OMN-d9-t1t" kind="unwind" unwindAction="unwindToList:" id="DEw-Ps-Duq"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="cancel" destination="Rmc-Nk-LNi" id="nHP-B3-J4s"/>
-                        <outlet property="profileImage" destination="ZcT-ja-Wvd" id="hF2-1U-A4y"/>
-                        <outlet property="scrollView" destination="H15-Pg-dV7" id="KSI-mV-O7C"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="43F-Yh-rYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="OMN-d9-t1t" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1652" y="434"/>
-        </scene>
         <!--Cal AddGPA Item View Controller - New Entry-->
         <scene sceneID="W9h-H2-W6F">
             <objects>
@@ -215,7 +157,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3da-cA-dvk">
-                                <rect key="frame" x="23" y="116" width="280" height="30"/>
+                                <rect key="frame" x="20" y="116" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="tintColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
@@ -224,7 +166,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QtF-4i-9qh">
-                                <rect key="frame" x="23" y="200" width="280" height="29"/>
+                                <rect key="frame" x="20" y="200" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="1"/>
@@ -235,22 +177,22 @@
                                 </segments>
                                 <color key="tintColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rR7-8b-cUT">
-                                <rect key="frame" x="17" y="255" width="81" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rR7-8b-cUT">
+                                <rect key="frame" x="120" y="255" width="81" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJN-Gp-ug0">
-                                <rect key="frame" x="17" y="171" width="92" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJN-Gp-ug0">
+                                <rect key="frame" x="114" y="171" width="92" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="K3m-4o-Xz5">
-                                <rect key="frame" x="21" y="358" width="284" height="31"/>
+                                <rect key="frame" x="18" y="358" width="284" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
@@ -258,14 +200,14 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45l-4x-Hsz">
-                                <rect key="frame" x="17" y="284" width="280" height="66"/>
+                                <rect key="frame" x="20" y="284" width="280" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6W-8A-g2C">
-                                <rect key="frame" x="17" y="87" width="81" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6W-8A-g2C">
+                                <rect key="frame" x="120" y="87" width="81" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
@@ -305,7 +247,7 @@
                 <tapGestureRecognizer id="WC9-zd-KSL"/>
                 <exit id="CH6-hV-mUN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1652" y="-327"/>
+            <point key="canvasLocation" x="1547" y="67"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3dj-E1-Ya0">
@@ -342,31 +284,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzg-u6-ZvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1227" y="-327"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="GM8-q4-Arg">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fbt-bL-DSo" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Bev-6I-PDc"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ybp-AK-kMa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="cb8-Sv-BEF" kind="relationship" relationship="rootViewController" id="xZ5-fB-uJr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7pf-Pm-T9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1227" y="434"/>
+            <point key="canvasLocation" x="1122" y="67"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="402-Faceit-SirArkimedes.jpg" width="1426" height="1641"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

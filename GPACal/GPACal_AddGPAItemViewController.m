@@ -105,7 +105,16 @@
     
     // Textfield keyboard hide
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
-    [self.view addGestureRecognizer:tap];   
+    [self.view addGestureRecognizer:tap];
+    
+    // Listening for Segment value change
+    [self.creditAmount addTarget:self action:@selector(action) forControlEvents:UIControlEventValueChanged];
+    
+}
+
+// Sliding away keyboard when Segment value changes
+- (void)action {
+    [_classField resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning

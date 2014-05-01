@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *noData;
 @property (strong, nonatomic) UILabel *addItemView;
+@property (weak, nonatomic) IBOutlet UITableView *tableMain;
 
 @end
 
@@ -77,6 +78,10 @@
     } else {
         NSLog(@"Unwound.");
     }
+    [super setEditing:NO animated:NO];
+    [self.tableView setEditing:NO animated:NO];
+    [self.tableView reloadData];
+    [self.navigationItem.leftBarButtonItem setStyle:UIBarButtonItemStylePlain];
 }
 
 - (void)viewDidLoad
@@ -191,6 +196,7 @@
     return YES;
 }
 
+
 // Removing tableview entry with swipe button
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -262,7 +268,7 @@
         [CATransaction commit];
     }
 }
-
+ 
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -285,31 +291,48 @@
 }
 */
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
+- (IBAction)startEditing:(id)sender {
+    
+    if (self.editing || [self.nameClass count] == 0)
+	{
+		[super setEditing:NO animated:NO];
+		[self.tableView setEditing:NO animated:NO];
+		[self.tableView reloadData];
+		[self.navigationItem.leftBarButtonItem setStyle:UIBarButtonItemStylePlain];
+	}
+	else
+	{
+		[super setEditing:YES animated:YES];
+		[self.tableView setEditing:YES animated:YES];
+		[self.tableView reloadData];
+		[self.navigationItem.leftBarButtonItem setStyle:UIBarButtonItemStyleDone];
+	}
+    
 }
-*/
 
-/*
 // Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     return YES;
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    
+    NSString *stringToMove = self.nameClass[sourceIndexPath.row];
+    [self.nameClass removeObjectAtIndex:sourceIndexPath.row];
+    [self.nameClass insertObject:stringToMove atIndex:destinationIndexPath.row];
+    
+    NSString *stringToMove2 = self.credits[sourceIndexPath.row];
+    [self.credits removeObjectAtIndex:sourceIndexPath.row];
+    [self.credits insertObject:stringToMove2 atIndex:destinationIndexPath.row];
+    
+    NSString *stringToMove3 = self.grade[sourceIndexPath.row];
+    [self.grade removeObjectAtIndex:sourceIndexPath.row];
+    [self.grade insertObject:stringToMove3 atIndex:destinationIndexPath.row];
+    
+    NSString *stringToMove4 = self.gpa[sourceIndexPath.row];
+    [self.gpa removeObjectAtIndex:sourceIndexPath.row];
+    [self.gpa insertObject:stringToMove4 atIndex:destinationIndexPath.row];
 }
-*/
 
 @end
