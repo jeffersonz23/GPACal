@@ -23,7 +23,7 @@
 @property NSMutableArray *grade;
 @property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *noData;
-@property (weak, nonatomic) IBOutlet UILabel *layover;
+@property (strong, nonatomic) UILabel *addItemView;
 
 @end
 
@@ -73,6 +73,7 @@
         [userDefaults synchronize];
         
         [self.tableView reloadData];
+        [self.addItemView removeFromSuperview];
     } else {
         NSLog(@"Unwound.");
     }
@@ -92,6 +93,34 @@
     self.gpa = [[NSMutableArray alloc] init];
     self.grade = [[NSMutableArray alloc] init];
     [self loadInitialData];
+    
+    if ([self.nameClass count] != 0) {
+        NSLog(@"Cell not showing...");
+        self.tableView.separatorColor = [UIColor colorWithRed:224/255.0 green:224/255.0 blue:224/255.0 alpha:1.0];
+        [self.addItemView removeFromSuperview];
+    } else {
+        
+        [CATransaction setCompletionBlock: ^{
+            NSLog(@"Cell showing...");
+            
+            self.addItemView = [[UILabel alloc] initWithFrame:CGRectMake( self.tableView.frame.size.width, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f)]; //notice this is ON screen!
+            self.addItemView.text = @"Click + to add courses!";
+            self.addItemView.font = [UIFont systemFontOfSize:24.0f];
+            self.addItemView.textColor = UIColorFromRGB(0x34AADC);
+            self.addItemView.textAlignment = NSTextAlignmentCenter;
+            
+            [UIView transitionWithView:self.view duration:0.5
+                               options:UIViewAnimationTransitionNone //change to whatever animation you like
+                            animations:^ {
+                                self.tableView.separatorColor = UIColorFromRGB( 0xf5f5f5 );
+                                self.addItemView.frame = CGRectMake( 0.0f, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f); //notice this is ON screen!
+                                [self.view addSubview:self.addItemView];
+                            }
+                            completion:nil];
+            
+            [self.view addSubview:self.addItemView];
+        }];
+    }
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -134,19 +163,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
-    if ([self.nameClass count] != 0)
-        [self.noData removeFromSuperview];
-
     // Return the number of rows in the section.
     return [self.nameClass count];
 }
-
-
-//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-//}
-
-
 
 - (GPACal_ClassCellTableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -177,7 +196,10 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //remove the deleted object from your data source.
         //If your data source is an NSMutableArray, do this
+        [CATransaction begin];
         [tableView beginUpdates];
+        
+        // Removing from user defaults
         [self.nameClass removeObjectAtIndex:indexPath.row];
         [self.credits removeObjectAtIndex:indexPath.row];
         [self.grade removeObjectAtIndex:indexPath.row];
@@ -185,12 +207,40 @@
         
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationRight];
         
-        // Removing from user defaults
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults removeObjectForKey:@"nameClass"];
         [userDefaults removeObjectForKey:@"credits"];
         [userDefaults removeObjectForKey:@"grade"];
         [userDefaults removeObjectForKey:@"gpa"];
+        
+        // Hide table and animate instruction
+        if ([self.nameClass count] != 0) {
+            NSLog(@"Cell not showing...");
+            self.tableView.separatorColor = [UIColor colorWithRed:224/255.0 green:224/255.0 blue:224/255.0 alpha:1.0];
+            [self.addItemView removeFromSuperview];
+        } else {
+            
+            [CATransaction setCompletionBlock: ^{
+                NSLog(@"Cell showing...");
+                
+                self.addItemView = [[UILabel alloc] initWithFrame:CGRectMake( self.tableView.frame.size.width, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f)]; //notice this is ON screen!
+                self.addItemView.text = @"Click + to add courses!";
+                self.addItemView.font = [UIFont systemFontOfSize:24.0f];
+                self.addItemView.textColor = UIColorFromRGB(0x34AADC);
+                self.addItemView.textAlignment = NSTextAlignmentCenter;
+                
+                [UIView transitionWithView:self.view duration:0.5
+                                   options:UIViewAnimationTransitionNone //change to whatever animation you like
+                                animations:^ {
+                                    self.tableView.separatorColor = UIColorFromRGB( 0xf5f5f5 );
+                                    self.addItemView.frame = CGRectMake( 0.0f, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f); //notice this is ON screen!
+                                    [self.view addSubview:self.addItemView];
+                                }
+                                completion:nil];
+                
+                [self.view addSubview:self.addItemView];
+            }];
+        }
         
         // Recaculate GPA
         
@@ -206,12 +256,10 @@
         } else {
             self.gradeLabel.text = @"GPA: ----";
         }
-        
-        if ([self.nameClass count] == 0)
-            [self.view addSubview:_noData];
-        
+
         [tableView endUpdates];
         
+        [CATransaction commit];
     }
 }
 
