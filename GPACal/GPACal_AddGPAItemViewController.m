@@ -9,6 +9,8 @@
 
 #import "GPACal_AddGPAItemViewController.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @interface GPACal_AddGPAItemViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *classField;
@@ -96,6 +98,11 @@
 {
     [super viewDidLoad];
     
+    // Navigation bar
+    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0x4A4A4A);
+    self.navigationController.navigationBar.tintColor = UIColorFromRGB(0x4A4A4A);
+    self.navigationController.navigationBar.translucent = NO;
+    
     // Capitlizing first letter of textfields
     self.classField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
     
@@ -110,6 +117,10 @@
     // Listening for Segment value change
     [self.creditAmount addTarget:self action:@selector(action) forControlEvents:UIControlEventValueChanged];
     
+    // Textfield border color
+    self.classField.layer.borderColor = [UIColorFromRGB(0x34AADC)CGColor];
+    self.classField.layer.borderWidth = 1.0;
+    self.classField.layer.cornerRadius = 3;
 }
 
 // Sliding away keyboard when Segment value changes
@@ -169,16 +180,5 @@
 - (void)dismissKeyboard {
     [_classField resignFirstResponder];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

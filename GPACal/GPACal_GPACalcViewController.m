@@ -16,7 +16,6 @@
 
 @interface GPACal_GPACalcViewController ()
 
-//@property NSMutableArray *GPAItemName;
 @property NSMutableArray *nameClass;
 @property NSMutableArray *credits;
 @property NSMutableArray *gpa;
@@ -56,9 +55,7 @@
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
     
     GPACal_AddGPAItemViewController *source = [segue sourceViewController];
-//    GPACal_AboutViewController *source1 = [segue sourceViewController];
     GPACal_GPAItem *item = source.GPAItem;
-//    GPACal_GPAItem *item2 = source1.aboutItem;
     if (item != nil) {
         [self.credits addObject:item.credit];
         [self.nameClass addObject:item.className];
@@ -89,8 +86,8 @@
     [super viewDidLoad];
     
     // Color change
-    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0xF7F7F7);
-    self.navigationController.navigationBar.tintColor = UIColorFromRGB(0xF7F7F7);
+    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0x4A4A4A);
+    self.navigationController.navigationBar.tintColor = UIColorFromRGB(0x4A4A4A);
     self.navigationController.navigationBar.translucent = NO;
     
     self.credits = [[NSMutableArray alloc] init];
@@ -101,7 +98,7 @@
     
     if ([self.nameClass count] != 0) {
         NSLog(@"Cell not showing...");
-        self.tableView.separatorColor = [UIColor colorWithRed:224/255.0 green:224/255.0 blue:224/255.0 alpha:1.0];
+        self.tableView.separatorColor = UIColorFromRGB(0x2B2B2B);
         [self.addItemView removeFromSuperview];
     } else {
         
@@ -109,7 +106,7 @@
             NSLog(@"Cell showing...");
             
             self.addItemView = [[UILabel alloc] initWithFrame:CGRectMake( self.tableView.frame.size.width, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f)]; //notice this is ON screen!
-            self.addItemView.text = @"Click + to add courses!";
+            self.addItemView.text = @"Click the + to add courses!";
             self.addItemView.font = [UIFont systemFontOfSize:24.0f];
             self.addItemView.textColor = UIColorFromRGB(0x34AADC);
             self.addItemView.textAlignment = NSTextAlignmentCenter;
@@ -117,7 +114,7 @@
             [UIView transitionWithView:self.view duration:0.5
                                options:UIViewAnimationOptionCurveLinear //change to whatever animation you like
                             animations:^ {
-                                self.tableView.separatorColor = UIColorFromRGB( 0xf5f5f5 );
+                                self.tableView.separatorColor = UIColorFromRGB(0x4A4A4A);
                                 self.addItemView.frame = CGRectMake( 0.0f, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f); //notice this is ON screen!
                                 [self.view addSubview:self.addItemView];
                             }
@@ -126,12 +123,6 @@
             [self.view addSubview:self.addItemView];
         }];
     }
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
 }
 
@@ -168,7 +159,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
     return [self.nameClass count];
 }
 
@@ -199,9 +189,8 @@
 
 // Removing tableview entry with swipe button
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        //remove the deleted object from your data source.
-        //If your data source is an NSMutableArray, do this
         [CATransaction begin];
         [tableView beginUpdates];
         
@@ -222,15 +211,15 @@
         // Hide table and animate instruction
         if ([self.nameClass count] != 0) {
             NSLog(@"Cell not showing...");
-            self.tableView.separatorColor = [UIColor colorWithRed:224/255.0 green:224/255.0 blue:224/255.0 alpha:1.0];
+            self.tableView.separatorColor = UIColorFromRGB(0x2B2B2B);
             [self.addItemView removeFromSuperview];
         } else {
             
             [CATransaction setCompletionBlock: ^{
                 NSLog(@"Cell showing...");
                 
-                self.addItemView = [[UILabel alloc] initWithFrame:CGRectMake( self.tableView.frame.size.width, self.tableView.frame.size.height/2 - 5, self.tableView.frame.size.width, 50.0f)]; //notice this is ON screen!
-                self.addItemView.text = @"Click + to add courses!";
+                self.addItemView = [[UILabel alloc] initWithFrame:CGRectMake( self.tableView.frame.size.width, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f)]; //notice this is ON screen!
+                self.addItemView.text = @"Click the + to add courses!";
                 self.addItemView.font = [UIFont systemFontOfSize:24.0f];
                 self.addItemView.textColor = UIColorFromRGB(0x34AADC);
                 self.addItemView.textAlignment = NSTextAlignmentCenter;
@@ -238,7 +227,7 @@
                 [UIView transitionWithView:self.view duration:0.5
                                    options:UIViewAnimationOptionCurveLinear //change to whatever animation you like
                                 animations:^ {
-                                    self.tableView.separatorColor = UIColorFromRGB( 0xf5f5f5 );
+                                    self.tableView.separatorColor = UIColorFromRGB(0x4A4A4A);
                                     self.addItemView.frame = CGRectMake( 0.0f, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f); //notice this is ON screen!
                                     [self.view addSubview:self.addItemView];
                                 }
@@ -249,7 +238,6 @@
         }
         
         // Recaculate GPA
-        
         CGFloat gpa = 0;
         int total_credits = 0;
         
@@ -268,28 +256,6 @@
         [CATransaction commit];
     }
 }
- 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
 - (IBAction)startEditing:(id)sender {
     

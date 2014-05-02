@@ -10,13 +10,6 @@
 
 @interface GPACal_GPAItem : NSObject
 
-//@property NSString *itemName;
-//@property BOOL completed;
-//@property (readonly) NSDate *creationDate;
-//
-//@property NSString *itemSubName;
-
-
 @property NSString *className;
 @property NSNumber *credit;
 @property NSString *grade;
