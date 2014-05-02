@@ -72,18 +72,28 @@
         
         [self.tableView reloadData];
         [self.addItemView removeFromSuperview];
+        
+        // Sperators
+        if (self.tableView.separatorStyle == UITableViewCellSeparatorStyleNone)
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        
     } else {
         NSLog(@"Unwound.");
     }
+    
+    // Turn off editing when opening new controller
     [super setEditing:NO animated:NO];
     [self.tableView setEditing:NO animated:NO];
     [self.tableView reloadData];
+    self.navigationItem.leftBarButtonItem.title = @"Edit";
     [self.navigationItem.leftBarButtonItem setStyle:UIBarButtonItemStylePlain];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     // Color change
     self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0x4A4A4A);
@@ -97,25 +107,23 @@
     [self loadInitialData];
     
     if ([self.nameClass count] != 0) {
-        NSLog(@"Cell not showing...");
-        self.tableView.separatorColor = UIColorFromRGB(0x2B2B2B);
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         [self.addItemView removeFromSuperview];
     } else {
         
         [CATransaction setCompletionBlock: ^{
-            NSLog(@"Cell showing...");
             
-            self.addItemView = [[UILabel alloc] initWithFrame:CGRectMake( self.tableView.frame.size.width, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f)]; //notice this is ON screen!
+            self.addItemView = [[UILabel alloc] initWithFrame:CGRectMake( self.tableView.frame.size.width, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f)];
             self.addItemView.text = @"Click the + to add courses!";
             self.addItemView.font = [UIFont systemFontOfSize:24.0f];
             self.addItemView.textColor = UIColorFromRGB(0x34AADC);
             self.addItemView.textAlignment = NSTextAlignmentCenter;
             
             [UIView transitionWithView:self.view duration:0.5
-                               options:UIViewAnimationOptionCurveLinear //change to whatever animation you like
+                               options:UIViewAnimationOptionCurveLinear
                             animations:^ {
-                                self.tableView.separatorColor = UIColorFromRGB(0x4A4A4A);
-                                self.addItemView.frame = CGRectMake( 0.0f, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f); //notice this is ON screen!
+                                self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+                                self.addItemView.frame = CGRectMake( 0.0f, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f);
                                 [self.view addSubview:self.addItemView];
                             }
                             completion:nil];
@@ -191,6 +199,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
         [CATransaction begin];
         [tableView beginUpdates];
         
@@ -200,7 +209,7 @@
         [self.grade removeObjectAtIndex:indexPath.row];
         [self.gpa removeObjectAtIndex:indexPath.row];
         
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationRight];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults removeObjectForKey:@"nameClass"];
@@ -210,25 +219,23 @@
         
         // Hide table and animate instruction
         if ([self.nameClass count] != 0) {
-            NSLog(@"Cell not showing...");
-            self.tableView.separatorColor = UIColorFromRGB(0x2B2B2B);
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
             [self.addItemView removeFromSuperview];
         } else {
             
             [CATransaction setCompletionBlock: ^{
-                NSLog(@"Cell showing...");
                 
-                self.addItemView = [[UILabel alloc] initWithFrame:CGRectMake( self.tableView.frame.size.width, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f)]; //notice this is ON screen!
+                self.addItemView = [[UILabel alloc] initWithFrame:CGRectMake( self.tableView.frame.size.width, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f)];
                 self.addItemView.text = @"Click the + to add courses!";
                 self.addItemView.font = [UIFont systemFontOfSize:24.0f];
                 self.addItemView.textColor = UIColorFromRGB(0x34AADC);
                 self.addItemView.textAlignment = NSTextAlignmentCenter;
                 
                 [UIView transitionWithView:self.view duration:0.5
-                                   options:UIViewAnimationOptionCurveLinear //change to whatever animation you like
+                                   options:UIViewAnimationOptionCurveLinear
                                 animations:^ {
-                                    self.tableView.separatorColor = UIColorFromRGB(0x4A4A4A);
-                                    self.addItemView.frame = CGRectMake( 0.0f, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f); //notice this is ON screen!
+                                    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+                                    self.addItemView.frame = CGRectMake( 0.0f, self.tableView.frame.size.height/2, self.tableView.frame.size.width, 50.0f);
                                     [self.view addSubview:self.addItemView];
                                 }
                                 completion:nil];
@@ -257,20 +264,29 @@
     }
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return @"Remove";
+}
+
 - (IBAction)startEditing:(id)sender {
     
     if (self.editing || [self.nameClass count] == 0)
 	{
 		[super setEditing:NO animated:NO];
+        [self.tableView reloadRowsAtIndexPaths:[self.tableView indexPathsForVisibleRows] withRowAnimation:UITableViewRowAnimationFade];
 		[self.tableView setEditing:NO animated:NO];
 		[self.tableView reloadData];
+        self.navigationItem.leftBarButtonItem.title = @"Edit";
 		[self.navigationItem.leftBarButtonItem setStyle:UIBarButtonItemStylePlain];
 	}
 	else
 	{
 		[super setEditing:YES animated:YES];
+        [self.tableView reloadRowsAtIndexPaths:[self.tableView indexPathsForVisibleRows] withRowAnimation:UITableViewRowAnimationFade];
 		[self.tableView setEditing:YES animated:YES];
 		[self.tableView reloadData];
+        self.navigationItem.leftBarButtonItem.title = @"Done";
 		[self.navigationItem.leftBarButtonItem setStyle:UIBarButtonItemStyleDone];
 	}
     

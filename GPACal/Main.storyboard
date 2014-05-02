@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.25098040700000002" green="0.25098040700000002" blue="0.25098040700000002" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" red="0.15686275059999999" green="0.15686275059999999" blue="0.15686275059999999" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.25098040700000002" green="0.25098040700000002" blue="0.25098040700000002" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="separatorColor" red="0.15686275064945221" green="0.15686275064945221" blue="0.15686275064945221" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.15686275059999999" green="0.15686275059999999" blue="0.15686275059999999" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.15686275059999999" green="0.15686275059999999" blue="0.15686275059999999" alpha="1" colorSpace="deviceRGB"/>
@@ -225,16 +225,16 @@
                             <constraint firstItem="s6W-8A-g2C" firstAttribute="top" secondItem="3F8-UT-G2p" secondAttribute="bottom" constant="19" id="Ewk-DB-p6v"/>
                             <constraint firstItem="FJN-Gp-ug0" firstAttribute="top" secondItem="3da-cA-dvk" secondAttribute="bottom" constant="25" id="G4n-Pm-f4L"/>
                             <constraint firstItem="3da-cA-dvk" firstAttribute="top" secondItem="s6W-8A-g2C" secondAttribute="bottom" constant="8" symbolic="YES" id="Hkd-gu-enZ"/>
-                            <constraint firstItem="45l-4x-Hsz" firstAttribute="top" secondItem="rR7-8b-cUT" secondAttribute="bottom" constant="8" id="MFz-ct-Nlb"/>
                             <constraint firstItem="s6W-8A-g2C" firstAttribute="leading" secondItem="rR7-8b-cUT" secondAttribute="leading" id="MYh-sd-SB7"/>
                             <constraint firstItem="3da-cA-dvk" firstAttribute="leading" secondItem="mHy-wV-0sP" secondAttribute="leading" constant="20" symbolic="YES" id="MkE-lJ-2V9"/>
                             <constraint firstItem="3da-cA-dvk" firstAttribute="leading" secondItem="QtF-4i-9qh" secondAttribute="leading" id="S1z-Ve-S4x"/>
+                            <constraint firstItem="K3m-4o-Xz5" firstAttribute="top" secondItem="3F8-UT-G2p" secondAttribute="bottom" constant="290" id="TRy-24-ly6"/>
                             <constraint firstAttribute="trailing" secondItem="3da-cA-dvk" secondAttribute="trailing" constant="20" symbolic="YES" id="Yle-cm-meV"/>
+                            <constraint firstItem="45l-4x-Hsz" firstAttribute="top" secondItem="3F8-UT-G2p" secondAttribute="bottom" constant="216" id="aYC-Q5-vOZ"/>
                             <constraint firstItem="QtF-4i-9qh" firstAttribute="top" secondItem="FJN-Gp-ug0" secondAttribute="bottom" constant="8" symbolic="YES" id="hQS-1c-E4r"/>
                             <constraint firstItem="rR7-8b-cUT" firstAttribute="top" secondItem="QtF-4i-9qh" secondAttribute="bottom" constant="27" id="iu3-d9-Fda"/>
                             <constraint firstItem="QtF-4i-9qh" firstAttribute="trailing" secondItem="3da-cA-dvk" secondAttribute="trailing" id="vYB-Yz-Yar"/>
                             <constraint firstItem="rR7-8b-cUT" firstAttribute="trailing" secondItem="s6W-8A-g2C" secondAttribute="trailing" id="w3z-oe-zdQ"/>
-                            <constraint firstItem="K3m-4o-Xz5" firstAttribute="top" secondItem="rR7-8b-cUT" secondAttribute="bottom" constant="82" id="xu8-y8-LGK"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="WC9-zd-KSL" appends="YES" id="3Pd-zR-MMs"/>
