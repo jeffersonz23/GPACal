@@ -209,6 +209,8 @@
         [self.grade removeObjectAtIndex:indexPath.row];
         [self.gpa removeObjectAtIndex:indexPath.row];
         
+        [tableView cellForRowAtIndexPath:indexPath].alpha = 0.0;
+        
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];

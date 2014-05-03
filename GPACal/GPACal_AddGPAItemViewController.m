@@ -120,7 +120,7 @@
     // Textfield border color
     self.classField.layer.borderColor = [UIColorFromRGB(0x34AADC)CGColor];
     self.classField.layer.borderWidth = 1.0;
-    self.classField.layer.cornerRadius = 3;
+    self.classField.layer.cornerRadius = 4;
 }
 
 // Sliding away keyboard when Segment value changes
