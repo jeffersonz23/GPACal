@@ -8,6 +8,7 @@
 //
 
 #import "GPACal_AddGPAItemViewController.h"
+#import "Flurry.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -26,10 +27,11 @@
 
 @implementation GPACal_AddGPAItemViewController
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if (sender != self.doneButton) return;
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if (sender != self.doneButton) return YES;
     if (self.classField.text.length > 0) {
-
+        
         self.GPAItem = [[GPACal_GPAItem alloc] init];
         
         // class name
@@ -75,21 +77,60 @@
             self.GPAItem.gpa = [NSNumber numberWithDouble:0.0];
         }
         
+        // Record and report class added
+        NSDictionary *classParams = [NSDictionary dictionaryWithObjectsAndKeys:
+                                     [NSString stringWithFormat:@"%@", self.classField.text], @"Class",
+                                     [NSString stringWithFormat:@"%d", self.creditAmount.selectedSegmentIndex + 1], @"Credit",
+                                     [NSString stringWithFormat:@"%@", self.gradeLabel.text], @"Grade",
+                                     nil];
+        [Flurry logEvent:@"Classes_Added" withParameters:classParams];
+        
+        return YES;
+        
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hey, you have an error."
-                                                        message:@"You must enter a class name!"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
+        
+        // Shake the textfield and cancel the segue
+        [self shake:self.classField];
+        return NO;
     }
+}
+
+-(void)shake:(UIView *)field
+{
+    const int reset = 5;
+    const int maxShakes = 6;
+    
+    static int shakes = 0;
+    static int translate = reset;
+    
+    [UIView animateWithDuration: 0.09 - (shakes * .01) // reduce duration every shake from .09 to .04
+                          delay: 0.01f //edge wait delay
+                        options: UIViewAnimationOptionCurveEaseInOut
+                     animations: ^{field.transform = CGAffineTransformMakeTranslation(translate, 0);}
+                     completion: ^(BOOL finished) {
+                         if (shakes < maxShakes) {
+                             shakes++;
+                             
+                             //throttle down movement
+                             if (translate > 0)
+                                 translate--;
+                             
+                             //change direction
+                             translate *= -1;
+                             [self shake:field];
+                         } else {
+                             field.transform = CGAffineTransformIdentity;
+                             shakes = 0; //ready for next time
+                             translate = reset; //ready for next time
+                             return;
+                         }
+                     }];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -121,11 +162,14 @@
     self.classField.layer.borderColor = [UIColorFromRGB(0x34AADC)CGColor];
     self.classField.layer.borderWidth = 1.0;
     self.classField.layer.cornerRadius = 4;
+    
+    // Placeholder classField color
+    [self.classField setValue: UIColorFromRGB(0x34AADC) forKeyPath:@"_placeholderLabel.textColor"];
 }
 
 // Sliding away keyboard when Segment value changes
 - (void)action {
-    [_classField resignFirstResponder];
+    [self dismissKeyboard];
 }
 
 - (void)didReceiveMemoryWarning

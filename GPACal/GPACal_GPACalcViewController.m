@@ -76,9 +76,6 @@
         // Sperators
         if (self.tableView.separatorStyle == UITableViewCellSeparatorStyleNone)
             self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-        
-    } else {
-        NSLog(@"Unwound.");
     }
     
     // Turn off editing when opening new controller

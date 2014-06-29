@@ -7,6 +7,7 @@
 //
 
 #import "GPACal_AppDelegate.h"
+#import "Flurry.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -23,6 +24,15 @@
                                                            UIColorFromRGB(0x34AADC), NSForegroundColorAttributeName,
                                                            shadow, NSShadowAttributeName,
                                                            [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
+    
+    // Hiding API key
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Keys" ofType:@"plist"];
+    NSDictionary *plistData = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSString *key = [plistData objectForKey:@"FlurryAPI"];
+    
+    // Enabling Flurry
+    [Flurry setCrashReportingEnabled:YES];
+    [Flurry startSession:key];
     
     return YES;
 }
