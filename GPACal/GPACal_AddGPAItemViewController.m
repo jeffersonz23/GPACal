@@ -80,7 +80,7 @@
         // Record and report class added
         NSDictionary *classParams = [NSDictionary dictionaryWithObjectsAndKeys:
                                      [NSString stringWithFormat:@"%@", self.classField.text], @"Class",
-                                     [NSString stringWithFormat:@"%d", self.creditAmount.selectedSegmentIndex + 1], @"Credit",
+                                     [NSString stringWithFormat:@"%d", (int)( self.creditAmount.selectedSegmentIndex + 1 )], @"Credit",
                                      [NSString stringWithFormat:@"%@", self.gradeLabel.text], @"Grade",
                                      nil];
         [Flurry logEvent:@"Classes_Added" withParameters:classParams];
