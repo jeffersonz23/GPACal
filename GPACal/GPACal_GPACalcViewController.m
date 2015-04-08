@@ -76,8 +76,8 @@
         
         // Send a verification message
         [TSMessage showNotificationInViewController:self.navigationController
-                                              title:[NSString stringWithFormat:@"%@ - GPA: %@", item.className, item.gpa]
-                                           subtitle:[NSString stringWithFormat:@"Credits: %@ Grade: %@", item.credit, item.grade]
+                                              title:[NSString stringWithFormat:@"%@ with GPA: %@", item.className, item.gpa]
+                                           subtitle:@""
                                               image:nil
                                                type:TSMessageNotificationTypeSuccess
                                            duration:5
