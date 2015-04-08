@@ -231,6 +231,19 @@
         [userDefaults removeObjectForKey:@"grade"];
         [userDefaults removeObjectForKey:@"gpa"];
         
+        // Run message upon class delete
+        [TSMessage showNotificationInViewController:self.navigationController
+                                              title:@"Class deleted!"
+                                           subtitle:@""
+                                              image:nil
+                                               type:TSMessageNotificationTypeWarning
+                                           duration:1
+                                           callback:nil
+                                        buttonTitle:nil
+                                     buttonCallback:nil
+                                         atPosition:TSMessageNotificationPositionNavBarOverlay
+                               canBeDismissedByUser:YES];
+        
         // Hide table and animate instruction
         if ([self.nameClass count] != 0) {
             self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
