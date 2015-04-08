@@ -9,6 +9,7 @@
 
 #import "GPACal_AddGPAItemViewController.h"
 #import "Flurry.h"
+#import "TSMessage.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -91,6 +92,20 @@
         
         // Shake the textfield and cancel the segue
         [self shake:self.classField];
+        
+        // Run message for error
+        [TSMessage showNotificationInViewController:self.navigationController
+                                              title:@"Please enter a class name!"
+                                           subtitle:@""
+                                              image:nil
+                                               type:TSMessageNotificationTypeError
+                                           duration:1
+                                           callback:nil
+                                        buttonTitle:nil
+                                     buttonCallback:nil
+                                         atPosition:TSMessageNotificationPositionNavBarOverlay
+                               canBeDismissedByUser:YES];
+        
         return NO;
     }
 }

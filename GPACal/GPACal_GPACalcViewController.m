@@ -74,6 +74,7 @@
         [self.tableView reloadData];
         [self.addItemView removeFromSuperview];
         
+        // Send a verification message
         [TSMessage showNotificationInViewController:self.navigationController
                                               title:[NSString stringWithFormat:@"%@ - GPA: %@", item.className, item.gpa]
                                            subtitle:[NSString stringWithFormat:@"Credits: %@ Grade: %@", item.credit, item.grade]
