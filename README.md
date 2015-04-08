@@ -1,7 +1,8 @@
 #GPA Calculator.app#
 
-In development...
+GPA Calculator app that is quick and simple.
 
-Current developer: Andrew Robinson
+Currently availible on the App Store: https://itunes.apple.com/us/app/gpa-cal/id873434927?mt=8
 
+Developer: Andrew Robinson
 Assistant: Matthew Robinson
