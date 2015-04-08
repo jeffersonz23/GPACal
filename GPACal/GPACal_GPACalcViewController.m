@@ -11,6 +11,7 @@
 #import "GPACal_AddGPAItemViewController.h"
 #import "GPACal_ClassCellTableViewCell.h"
 #import "GPACal_AboutViewController.h"
+#import "TSMessage.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -73,6 +74,18 @@
         [self.tableView reloadData];
         [self.addItemView removeFromSuperview];
         
+        [TSMessage showNotificationInViewController:self.navigationController
+                                              title:[NSString stringWithFormat:@"%@ - GPA: %@", item.className, item.gpa]
+                                           subtitle:[NSString stringWithFormat:@"Credits: %@ Grade: %@", item.credit, item.grade]
+                                              image:nil
+                                               type:TSMessageNotificationTypeSuccess
+                                           duration:5
+                                           callback:nil
+                                        buttonTitle:nil
+                                     buttonCallback:nil
+                                         atPosition:TSMessageNotificationPositionNavBarOverlay
+                               canBeDismissedByUser:YES];
+        
         // Sperators
         if (self.tableView.separatorStyle == UITableViewCellSeparatorStyleNone)
             self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
@@ -84,6 +97,7 @@
     [self.tableView reloadData];
     self.navigationItem.leftBarButtonItem.title = @"Edit";
     [self.navigationItem.leftBarButtonItem setStyle:UIBarButtonItemStylePlain];
+    
 }
 
 - (void)viewDidLoad
