@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RVg-D8-eha">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RVg-D8-eha">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--CalGPA Calc View Controller - GPA Calculator-->
+        <!--GPA Calculator-->
         <scene sceneID="fo3-X8-0SD">
             <objects>
                 <viewController id="OzL-S2-jYx" customClass="GPACal_GPACalcViewController" sceneMemberID="viewController">
@@ -42,7 +43,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osx-H8-tTi">
-                                                    <rect key="frame" x="20" y="8" width="203" height="27"/>
+                                                    <rect key="frame" x="20" y="8" width="203" height="28"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="23"/>
                                                     <color key="textColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -125,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="573" y="67"/>
         </scene>
-        <!--Cal AddGPA Item View Controller - New Class-->
+        <!--New Class-->
         <scene sceneID="W9h-H2-W6F">
             <objects>
                 <viewController id="A3s-u3-bNM" customClass="GPACal_AddGPAItemViewController" sceneMemberID="viewController">
@@ -241,7 +242,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KP8-0E-cRe">
                             <color key="tintColor" red="0.023529414089999999" green="0.66274511810000003" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
-                                <segue destination="CH6-hV-mUN" kind="unwind" unwindAction="unwindToList:" id="cUB-bY-uNY"/>
+                                <segue destination="CH6-hV-mUN" kind="unwind" unwindAction="unwindToList:" id="bZo-Nm-c6T"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="mYe-2Y-c5l">
