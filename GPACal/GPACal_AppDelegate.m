@@ -16,14 +16,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    // Navigation bar title color
-    NSShadow *shadow = [[NSShadow alloc] init];
-    shadow.shadowColor = UIColorFromRGB(0x4A4A4A);
-    shadow.shadowOffset = CGSizeMake(0, 1);
+//    // Navigation bar title color
+//    NSShadow *shadow = [[NSShadow alloc] init];
+//    shadow.shadowColor = UIColorFromRGB(0x4A4A4A);
+//    shadow.shadowOffset = CGSizeMake(0, 1);
+//    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+//                                                           UIColorFromRGB(0x34AADC), NSForegroundColorAttributeName,
+//                                                           shadow, NSShadowAttributeName,
+//                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
+    
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                            UIColorFromRGB(0x34AADC), NSForegroundColorAttributeName,
-                                                           shadow, NSShadowAttributeName,
-                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
+                                                           nil, nil,
+                                                           [UIFont fontWithName:@"System" size:21.0], NSFontAttributeName, nil]];
 
     // This may come in handy one day.
 //    [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
