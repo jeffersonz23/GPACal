@@ -24,6 +24,9 @@
                                                            UIColorFromRGB(0x34AADC), NSForegroundColorAttributeName,
                                                            shadow, NSShadowAttributeName,
                                                            [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
+
+    // This may come in handy one day.
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
     
     // Hiding API key
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Keys" ofType:@"plist"];

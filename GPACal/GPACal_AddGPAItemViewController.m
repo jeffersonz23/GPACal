@@ -154,10 +154,10 @@
 {
     [super viewDidLoad];
     
-    // Navigation bar
-    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0x4A4A4A);
-    self.navigationController.navigationBar.tintColor = UIColorFromRGB(0x4A4A4A);
-    self.navigationController.navigationBar.translucent = NO;
+//    // Navigation bar
+//    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0x4A4A4A);
+//    self.navigationController.navigationBar.tintColor = UIColorFromRGB(0x4A4A4A);
+//    self.navigationController.navigationBar.translucent = NO;
     
     // Capitlizing first letter of textfields
     self.classField.autocapitalizationType = UITextAutocapitalizationTypeSentences;

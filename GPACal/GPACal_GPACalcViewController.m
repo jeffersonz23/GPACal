@@ -109,10 +109,10 @@
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    // Color change
-    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0x4A4A4A);
-    self.navigationController.navigationBar.tintColor = UIColorFromRGB(0x4A4A4A);
-    self.navigationController.navigationBar.translucent = NO;
+//    // Color change
+//    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0x4A4A4A);
+//    self.navigationController.navigationBar.tintColor = UIColorFromRGB(0x4A4A4A);
+//    self.navigationController.navigationBar.translucent = NO;
     
     self.credits = [[NSMutableArray alloc] init];
     self.nameClass = [[NSMutableArray alloc] init];
