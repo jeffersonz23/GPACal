@@ -75,8 +75,10 @@
         [self.addItemView removeFromSuperview];
         
         // Send a verification message
+        float gpa = [item.gpa floatValue];
+        
         [TSMessage showNotificationInViewController:self.navigationController
-                                              title:[NSString stringWithFormat:@"%@ with GPA: %@", item.className, item.gpa]
+                                              title:[NSString stringWithFormat:@"%@ with GPA: %.2f", item.className, gpa]
                                            subtitle:@""
                                               image:nil
                                                type:TSMessageNotificationTypeSuccess
