@@ -178,6 +178,9 @@
     self.classField.layer.borderWidth = 1.0;
     self.classField.layer.cornerRadius = 4;
     
+    // Light Keyboard, pls
+    self.classField.keyboardAppearance = UIKeyboardAppearanceLight;
+    
     // Placeholder classField color
     [self.classField setValue: UIColorFromRGB(0x34AADC) forKeyPath:@"_placeholderLabel.textColor"];
 }
