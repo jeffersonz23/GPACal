@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		4D4078EE1AD616A400116708 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4078ED1AD616A400116708 /* Security.framework */; };
 		4D4078F41AD6219A00116708 /* libFlurry_6.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4078F31AD6219A00116708 /* libFlurry_6.3.0.a */; };
+		4D4078F61AD623CC00116708 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4078F51AD623CC00116708 /* Launch Screen.xib */; };
+		4D4078F81AD623F100116708 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4078F71AD623F100116708 /* iTunesArtwork.png */; };
 		4D42174D1909D724004CA8BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D42174C1909D724004CA8BE /* Main.storyboard */; };
 		4D6118A419032AF100B2519F /* GPACal_AddGPAItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6118A319032AF100B2519F /* GPACal_AddGPAItemViewController.m */; };
 		4D6118A719032CBB00B2519F /* GPACal_GPACalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6118A619032CBB00B2519F /* GPACal_GPACalcViewController.m */; };
 		4D6118AA1903888800B2519F /* GPACal_GPAItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6118A91903888800B2519F /* GPACal_GPAItem.m */; };
 		4D64AAA51904C51C00AEDE7E /* GPACal_ClassCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D64AAA41904C51C00AEDE7E /* GPACal_ClassCellTableViewCell.m */; };
-		4D8D63911AD598CE009F12F1 /* Loading Screen N.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8D63901AD598CE009F12F1 /* Loading Screen N.png */; };
-		4D8D63931AD598EC009F12F1 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D8D63921AD598EC009F12F1 /* Launch Screen.xib */; };
 		4D8D63E81AD5AD23009F12F1 /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D63E71AD5AD23009F12F1 /* HexColor.m */; };
 		4D8D64041AD5AD2F009F12F1 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 4D8D63EA1AD5AD2F009F12F1 /* .gitkeep */; };
 		4D8D64051AD5AD2F009F12F1 /* NotificationBackgroundError.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8D63EB1AD5AD2F009F12F1 /* NotificationBackgroundError.png */; };
@@ -68,6 +68,8 @@
 		4D4078ED1AD616A400116708 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4D4078F21AD6219A00116708 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = "Flurry iPhone SDK viPhone 6/Flurry-iOS-6.3.0.a/Flurry/Flurry.h"; sourceTree = SOURCE_ROOT; };
 		4D4078F31AD6219A00116708 /* libFlurry_6.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_6.3.0.a; path = "Flurry iPhone SDK viPhone 6/Flurry-iOS-6.3.0.a/Flurry/libFlurry_6.3.0.a"; sourceTree = SOURCE_ROOT; };
+		4D4078F51AD623CC00116708 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		4D4078F71AD623F100116708 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = ../../AppIcon2.0/iTunesArtwork.png; sourceTree = "<group>"; };
 		4D42174C1909D724004CA8BE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4D5281AA19607AF8007E17A0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4D6118A219032AF100B2519F /* GPACal_AddGPAItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPACal_AddGPAItemViewController.h; sourceTree = "<group>"; };
@@ -78,8 +80,6 @@
 		4D6118A91903888800B2519F /* GPACal_GPAItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPACal_GPAItem.m; sourceTree = "<group>"; };
 		4D64AAA31904C51C00AEDE7E /* GPACal_ClassCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPACal_ClassCellTableViewCell.h; sourceTree = "<group>"; };
 		4D64AAA41904C51C00AEDE7E /* GPACal_ClassCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPACal_ClassCellTableViewCell.m; sourceTree = "<group>"; };
-		4D8D63901AD598CE009F12F1 /* Loading Screen N.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Loading Screen N.png"; sourceTree = "<group>"; };
-		4D8D63921AD598EC009F12F1 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		4D8D63E61AD5AD23009F12F1 /* HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HexColor.h; path = "TSMessages-master/HexColors/HexColor.h"; sourceTree = "<group>"; };
 		4D8D63E71AD5AD23009F12F1 /* HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HexColor.m; path = "TSMessages-master/HexColors/HexColor.m"; sourceTree = "<group>"; };
 		4D8D63EA1AD5AD2F009F12F1 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -264,9 +264,9 @@
 				4D9CBF5B1902114A00A708D1 /* GPACal_AppDelegate.h */,
 				4D9CBF5C1902114A00A708D1 /* GPACal_AppDelegate.m */,
 				4D9CBF5E1902114A00A708D1 /* Images.xcassets */,
-				4D8D63901AD598CE009F12F1 /* Loading Screen N.png */,
-				4D8D63921AD598EC009F12F1 /* Launch Screen.xib */,
+				4D4078F71AD623F100116708 /* iTunesArtwork.png */,
 				4D9CBF531902114A00A708D1 /* Supporting Files */,
+				4D4078F51AD623CC00116708 /* Launch Screen.xib */,
 			);
 			path = GPACal;
 			sourceTree = "<group>";
@@ -412,13 +412,14 @@
 				4D8D64101AD5AD2F009F12F1 /* NotificationBackgroundWarning@2x.png in Resources */,
 				4D8D64131AD5AD2F009F12F1 /* NotificationButtonBackground.png in Resources */,
 				4D8D64081AD5AD2F009F12F1 /* NotificationBackgroundErrorIcon@2x.png in Resources */,
+				4D4078F61AD623CC00116708 /* Launch Screen.xib in Resources */,
+				4D4078F81AD623F100116708 /* iTunesArtwork.png in Resources */,
 				4D8D640A1AD5AD2F009F12F1 /* NotificationBackgroundMessage@2x.png in Resources */,
 				4D8D640C1AD5AD2F009F12F1 /* NotificationBackgroundSuccess@2x.png in Resources */,
 				4D9CBF571902114A00A708D1 /* InfoPlist.strings in Resources */,
 				4D9CBF5F1902114A00A708D1 /* Images.xcassets in Resources */,
 				4D8D64121AD5AD2F009F12F1 /* NotificationBackgroundWarningIcon@2x.png in Resources */,
 				4D8D64071AD5AD2F009F12F1 /* NotificationBackgroundErrorIcon.png in Resources */,
-				4D8D63931AD598EC009F12F1 /* Launch Screen.xib in Resources */,
 				4D8D64051AD5AD2F009F12F1 /* NotificationBackgroundError.png in Resources */,
 				4D8D64061AD5AD2F009F12F1 /* NotificationBackgroundError@2x.png in Resources */,
 				4D8D640F1AD5AD2F009F12F1 /* NotificationBackgroundWarning.png in Resources */,
@@ -428,7 +429,6 @@
 				4D8D64151AD5AD2F009F12F1 /* TSMessagesDefaultDesign.json in Resources */,
 				4D8D640B1AD5AD2F009F12F1 /* NotificationBackgroundSuccess.png in Resources */,
 				4D8D64091AD5AD2F009F12F1 /* NotificationBackgroundMessage.png in Resources */,
-				4D8D63911AD598CE009F12F1 /* Loading Screen N.png in Resources */,
 				4D8D64041AD5AD2F009F12F1 /* .gitkeep in Resources */,
 				4D8D64111AD5AD2F009F12F1 /* NotificationBackgroundWarningIcon.png in Resources */,
 			);
