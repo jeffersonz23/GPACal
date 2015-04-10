@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="fastlane">
+  <testsuite name="deploy">
+    <testcase name="0: fastlane_version" time="0.000146"/>
+    <testcase name="1: ipa" time="18.67177"/>
+    <testcase name="2: say" time="1.061294"/>
+  </testsuite>
+</testsuites>

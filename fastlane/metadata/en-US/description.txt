@@ -1,0 +1,10 @@
+Exactly as one would expect, this GPA Calculator takes the burden out of sitting for long hours and trying to calculate each and every class that one has taken. This simplifies that into one app.
+
+Features:
+- Automatic calculation
+- Simplistic design
+- Class adding and deleting
+- Grade calculation
+- Sleek and simple animations.
+
+GPA Cal is built by one developer, dedicated to bringing you frequent updates where needed. Of course, your opinion is always appreciated and welcomes your input. Feel free to take a minute and share your thoughts!
