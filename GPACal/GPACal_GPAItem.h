@@ -14,5 +14,7 @@
 @property NSNumber *credit;
 @property NSString *grade;
 @property NSNumber *gpa;
+@property NSString *apgrade;
+@property NSNumber *apgpa;
 
 @end
