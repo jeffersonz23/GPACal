@@ -17,6 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *classField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *creditAmount;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *gpaAmount;
 @property (weak, nonatomic) IBOutlet UISlider *gradeSlider;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
@@ -76,6 +77,42 @@
             
         } else {
             self.GPAItem.gpa = [NSNumber numberWithDouble:0.0];
+        }
+        
+        //AP scores
+        self.GPAItem.apgrade = self.gradeLabel.text;
+        if ([self.gradeLabel.text isEqual: @"A"]) {
+            self.GPAItem.apgpa = [NSNumber numberWithDouble:5.00];
+            
+        } else if ([self.gradeLabel.text isEqual:@"A-"]) {
+            self.GPAItem.apgpa = [NSNumber numberWithDouble:4.70];
+            
+        } else if ([self.gradeLabel.text isEqual:@"B+"]) {
+            self.GPAItem.apgpa = [NSNumber numberWithDouble:4.30];
+            
+        } else if ([self.gradeLabel.text isEqual:@"B"]) {
+            self.GPAItem.apgpa = [NSNumber numberWithDouble:4.0];
+            
+        } else if ([self.gradeLabel.text isEqual:@"B-"]) {
+            self.GPAItem.apgpa = [NSNumber numberWithDouble:3.7];
+            
+        } else if ([self.gradeLabel.text isEqual:@"C+"]) {
+            self.GPAItem.apgpa = [NSNumber numberWithDouble:3.3];
+            
+        } else if ([self.gradeLabel.text isEqual:@"C"]) {
+            self.GPAItem.apgpa = [NSNumber numberWithDouble:3.3];
+            
+        } else if ([self.gradeLabel.text isEqual:@"C-"]) {
+            self.GPAItem.apgpa = [NSNumber numberWithDouble:3.0];
+            
+        } else if ([self.gradeLabel.text isEqual:@"D+"]) {
+            self.GPAItem.apgpa = [NSNumber numberWithDouble:2.7];
+            
+        } else if ([self.gradeLabel.text isEqual:@"D"]) {
+            self.GPAItem.apgpa = [NSNumber numberWithDouble:2.3];
+            
+        } else {
+            self.GPAItem.apgpa = [NSNumber numberWithDouble:0.0];
         }
         
         // Record and report class added
